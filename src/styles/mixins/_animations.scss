@@ -1,0 +1,102 @@
+// reusable animation mixins
+
+/// Animation mixin helper that translates element vertically
+///
+/// @param $anim-name {string} - name of the animation
+/// @param $from {number} - starting position
+/// @param $to {number} - ending position
+///
+/// @return {SCSS} keyframes
+@mixin slide-y($anim-name, $from, $to) {
+  $name: unquote($anim-name);
+
+  @keyframes #{$name} {
+    from {
+      transform: translateY($from);
+    }
+
+    to {
+      transform: translateY($to);
+    }
+  }
+}
+
+/// Animation mixin helper that translates element horizontally
+///
+/// @param $anim-name {string} - name of the animation
+/// @param $from {number} - starting position
+/// @param $to {number} - ending position
+///
+/// @return {SCSS} keyframes
+@mixin slide-x($anim-name, $from, $to) {
+  $name: unquote($anim-name);
+
+  @keyframes #{$name} {
+    from {
+      transform: translateX($from);
+    }
+
+    to {
+      transform: translateX($to);
+    }
+  }
+}
+
+/// Animation mixin helper that affects `opacity`
+///
+/// @param $anim-name {string} - name of the animation
+/// @param $from {number} - starting opacity
+/// @param $to {number} - ending opacity
+///
+/// @return {SCSS} keyframes
+@mixin fade($anim-name, $from, $to) {
+  $name: unquote($anim-name);
+
+  @keyframes #{$name} {
+    from {
+      opacity: $from;
+    }
+
+    to {
+      opacity: $to;
+    }
+  }
+}
+
+/// Animation mixin helper that affects `scale`
+///
+/// @param $anim-name {string} - name of the animation
+/// @param $from {number} - starting scale
+/// @param $to {number} - ending scale
+///
+/// @return {SCSS} keyframes
+@mixin scale($anim-name, $from, $to) {
+  $name: unquote($anim-name);
+
+  @keyframes #{$name} {
+    from {
+      transform: scale($from);
+    }
+
+    to {
+      transform: scale($to);
+    }
+  }
+}
+
+/* OUT-OF-THE-BOX ANIMATION DECLARATIONS */
+@mixin animations() {
+  /* translation animations */
+  @include slide-y("slide-down", rem(-15), 0);
+  @include slide-y("slide-up", rem(15), 0);
+  @include slide-x("slide-right", rem(-15), 0);
+  @include slide-x("slide-left", rem(15), 0);
+
+  /* opacity animations */
+  @include fade("fade-in", 0, 1);
+  @include fade("fade-out", 1, 0);
+
+  /* scale animations */
+  @include scale("grow", 0.9, 1);
+  @include scale("shrink", 1.1, 1);
+}

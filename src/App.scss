@@ -1,0 +1,48 @@
+@import "./styles/index.scss";
+
+.App {
+  text-align: center;
+  height: 100%;
+
+  .home-drawer {
+    height: 100%;
+  }
+
+  .menu {
+    z-index: 1001;
+    position: fixed;
+    font-size: 70px;
+    top: 10px;
+    left: 30px;
+    color: #fff;
+  }
+
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #f1f1f1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    .content {
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

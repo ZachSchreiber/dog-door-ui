@@ -1,0 +1,42 @@
+.image {
+  padding-block-start: 100px;
+  background-image: url("https://blumcenterforhealth.com/wp-content/uploads/2015/01/iStock_000017490436_Medium.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &__overlay {
+    background: #4e4e4e99;
+    background: -webkit-linear-gradient(bottom, #4e4e4e99, #95959533);
+    background: -moz-linear-gradient(bottom, #4e4e4e99, #95959533);
+    background: linear-gradient(to top, #4e4e4e99, #95959533);
+    color: white;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+      font-size: 11em;
+      margin: 0;
+    }
+
+    p {
+      font-size: 5em;
+    }
+  }
+}
+
+.about {
+  height: 100%;
+}
+
+.footer {
+  height: 100%;
+  background-color: #dfdfdf;
+}

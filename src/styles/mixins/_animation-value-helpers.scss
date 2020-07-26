@@ -1,0 +1,146 @@
+@import "./animation-durations";
+
+/// Utility function that build a transition property value from given params
+///
+/// @param $property {string} - property to apply transition or animation to
+/// @param $duration {string} - animation-duration value, e.g. "fast", "slow", "snap"
+/// @param $easing {string} - easing function to use
+/// @param $delay {string} - animation-delay value, e.g. "fast", "slow", "snap"
+/// @param $opts {arglist} - other transition or animation
+///
+/// @return {property-value} - e.g. transition: $property $duration $easing $delay $opts...
+@function gen-anim-value($opts...) {
+  $opt-string: "";
+
+  @each $opt in $opts {
+    $opt-string: $opt-string + " #{$opt}";
+  }
+
+  @return unquote($opt_string);
+}
+
+//* Usage With Transitions *//
+///
+/// Only specifying property - returns default delay of 0 and default easing
+/// function of ease-in-out
+/// @example
+/// .selector {
+///   ...
+///   transition: eb-snap("opacity");
+/// }
+/// @returns: transition: opacity map-get($animation-durations, "snap") ease-in-out;
+///
+/// Specifying property, easing, and delay - returns value with specified arguments
+/// @example - specified property, easing function, and delay
+/// .selector {
+///   ...
+///   transition: eb-snap("opacity", "linear", "fast");
+/// }
+/// @returns: transition: opacity map-get($animation-durations, "snap") linear map-get($animation-durations, "fast");
+///
+///
+//* Usage With Animations *//
+/// substitute `property` value with `animation-name`
+/// @example - specifying all arguments
+/// .selector {
+///   ...
+///   animation: eb-brisk("eb-anim-name", "linear", "snap", "infinite", "reverse", "both");
+/// }
+/// @returns:
+///   animation:
+///     eb-anim-name
+///     map-get($animation-durations, "brisk")
+///     linear
+///     map-get($animation-durations, "snap")
+///     infinite
+///     reverse
+///     both;
+///
+/// Generates a property value with default easing and "snap" duration
+///
+/// @param $property {string} - property to apply transition or animation to
+/// @param $easing {string} - easing function to use
+/// @param $delay {string} - animation-delay value, e.g. "fast", "slow", "snap"
+/// @param $other {arglist} - other transition or animation
+///
+/// @return {property-value} - e.g. transition: { value }
+@function snap($property, $easing: "ease-in-out", $delay: "none", $other...) {
+  @return gen-anim-value(
+    $property,
+    map-get($animation-durations, "snap"),
+    $easing,
+    map-get($animation-durations, $delay),
+    $other...
+  );
+}
+
+/// Generates a property value with default easing and "fast" duration
+@function fast($property, $easing: "ease-in-out", $delay: "none", $other...) {
+  @return gen-anim-value(
+    $property,
+    map-get($animation-durations, "fast"),
+    $easing,
+    map-get($animation-durations, $delay),
+    $other...
+  );
+}
+
+/// Generates a property value with default easing and "brisk" duration
+@function brisk($property, $easing: "ease-in-out", $delay: "none", $other...) {
+  @return gen-anim-value(
+    $property,
+    map-get($animation-durations, "brisk"),
+    $easing,
+    map-get($animation-durations, $delay),
+    $other...
+  );
+}
+
+/// Generates a property value with default easing and "slow" duration
+@function slow($property, $easing: "ease-in-out", $delay: "none", $other...) {
+  @return gen-anim-value(
+    $property,
+    map-get($animation-durations, "slow"),
+    $easing,
+    map-get($animation-durations, $delay),
+    $other...
+  );
+}
+
+/// Generates a property value with default easing and "sleepy" duration
+@function sleepy($property, $easing: "ease-in-out", $delay: "none", $other...) {
+  @return gen-anim-value(
+    $property,
+    map-get($animation-durations, "sleepy"),
+    $easing,
+    map-get($animation-durations, $delay),
+    $other...
+  );
+}
+
+/// Generates a property value with default easing and "eternity" duration
+@function eternity(
+  $property,
+  $easing: "ease-in-out",
+  $delay: "none",
+  $other...
+) {
+  @return gen-anim-value(
+    $property,
+    map-get($animation-durations, "eternity"),
+    $easing,
+    map-get($animation-durations, $delay),
+    $other...
+  );
+}
+
+/// Generates a property value with no duration
+@function none($property, $easing: "ease-in-out", $delay: "none", $other...) {
+  @return gen-anim-value(
+    $property,
+    map-get($animation-durations, "none"),
+    $easing,
+    map-get($animation-durations, $delay),
+    $other...
+  );
+}

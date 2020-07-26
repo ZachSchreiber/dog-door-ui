@@ -1,0 +1,61 @@
+@keyframes drawer-animation {
+  from {
+    inset-inline-start: 0;
+    inset-inline-end: auto;
+    transform: translate(-100%, 0);
+  }
+
+  to {
+    transform: translate(0, 0);
+    visibility: visible;
+  }
+}
+
+@keyframes overlay-animation {
+  from {
+    opacity: 0;
+    width: 0%;
+  }
+
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+.drawer-overlay {
+  position: fixed;
+  z-index: 9000;
+  background: rgba($color: #000000, $alpha: 0.5);
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  &--open {
+    animation: overlay-animation 0.2s;
+    width: 100%;
+  }
+}
+
+.drawer {
+  position: fixed;
+  inset-block: 0;
+  z-index: 9001;
+  inline-size: rem(300);
+  overflow: auto;
+  background: #fff;
+  visibility: hidden;
+  transition: scale, fade;
+
+  &:focus {
+    outline: none;
+  }
+
+  &--open {
+    transform: translate(0, 0);
+    visibility: visible;
+    width: 20%;
+
+    animation: drawer-animation 0.3s;
+  }
+}
