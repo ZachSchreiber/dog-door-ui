@@ -1,11 +1,27 @@
 @import "./styles/index.scss";
 
-.App {
+.app {
   text-align: center;
   height: 100%;
 
-  .home-drawer {
-    height: 100%;
+  .close-drawer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    font-size: 26px;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    padding-block-start: 30px;
+
+    a {
+      font-size: 26px;
+      text-decoration: none;
+      color: black;
+      margin-block-end: 10px;
+    }
   }
 
   .menu {
@@ -23,26 +39,17 @@
     align-items: center;
     z-index: 1000;
     height: 100px;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(70, 70, 70, 0.3);
     color: #f1f1f1;
     position: fixed;
     top: 0;
     width: 100%;
 
-    .content {
+    &__content {
       a {
         color: #fff;
         text-decoration: none;
       }
     }
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }

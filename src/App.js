@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Route, Switch, Link } from "react-router-dom";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import Home from "./components/home";
 import About from "./components/about";
 import Contact from "./components/contact";
@@ -18,15 +18,21 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="app">
         <Drawer
-          className="home-drawer"
           isOpen={this.state.isOpen}
           onClose={this.onToggle}
           titleElementId={"fun"}
           position={Drawer.POSITIONS.end}
         >
-          <section>
+          <div className="close-drawer">
+            <FontAwesomeIcon
+              icon={faTimes}
+              className="close-drawer__button"
+              onClick={this.onToggle}
+            />
+          </div>
+          <section className="links">
             <Link to={"/about"}>About</Link>
             <Link to={"/contact"}>Contact</Link>
           </section>
@@ -35,7 +41,7 @@ class App extends Component {
           <FontAwesomeIcon icon={faBars} />
         </div>
         <div className="header">
-          <div className="content">
+          <div className="header__content">
             <Link to={"/"}>Logo</Link>
           </div>
         </div>

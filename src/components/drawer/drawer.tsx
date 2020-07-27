@@ -114,15 +114,15 @@ class Drawer extends React.Component<DrawerProps> {
 
   handleOverlayClick = () => {
     this.handleClose(false, INTERACTIONS_AFFORDANCE.OVERLAY);
+    console.log("clicked");
   };
 
   renderOverlay = () => {
-    const { isOpen, className: extraClassName } = this.props;
+    const { isOpen } = this.props;
 
     const { drawerOverlayClassName } = Drawer;
     const overlayClassName = cn(
       drawerOverlayClassName,
-      extraClassName,
       isOpen && `${drawerOverlayClassName}--open`
     );
     return (
@@ -135,17 +135,10 @@ class Drawer extends React.Component<DrawerProps> {
   };
 
   renderDrawer = () => {
-    const {
-      isOpen,
-      position,
-      className: extraClassName,
-      children,
-      titleElementId
-    } = this.props;
+    const { isOpen, position, children, titleElementId } = this.props;
     const { drawerClassName } = Drawer;
     const className = cn(
       drawerClassName,
-      extraClassName,
       isOpen && `${drawerClassName}--open`,
       position === POSITIONS.start && `${drawerClassName}--start-positioned`,
       position === POSITIONS.end && `${drawerClassName}--end-positioned`
