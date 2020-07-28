@@ -7,14 +7,26 @@
   .close-drawer {
     display: flex;
     justify-content: flex-end;
-    padding: 20px;
-    font-size: 26px;
+
+    &__button {
+      margin-block-start: 20px;
+      margin-inline-end: 30px;
+      font-size: 26px;
+      border: 0;
+      background-color: #fff;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 
   .links {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     padding-block-start: 30px;
+    padding-inline-start: 20px;
 
     a {
       font-size: 26px;

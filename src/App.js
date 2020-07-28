@@ -23,14 +23,13 @@ class App extends Component {
           isOpen={this.state.isOpen}
           onClose={this.onToggle}
           titleElementId={"fun"}
+          setFocusOnOpen={true}
           position={Drawer.POSITIONS.end}
         >
           <div className="close-drawer">
-            <FontAwesomeIcon
-              icon={faTimes}
-              className="close-drawer__button"
-              onClick={this.onToggle}
-            />
+            <button className="close-drawer__button">
+              <FontAwesomeIcon icon={faTimes} onClick={this.onToggle} />
+            </button>
           </div>
           <section className="links">
             <Link to={"/about"}>About</Link>
