@@ -19,7 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <Drawer
+        {/* <Drawer
           isOpen={this.state.isOpen}
           onClose={this.onToggle}
           titleElementId={"fun"}
@@ -43,7 +43,7 @@ class App extends Component {
           <div className="header__content">
             <Link to={"/"}>Logo</Link>
           </div>
-        </div>
+        </div> */}
         <Switch>
           <Route exact={true} path="/" component={Home} />
           <Route exact={true} path="/about" component={About} />

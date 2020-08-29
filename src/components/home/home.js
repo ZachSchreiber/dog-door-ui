@@ -1,4 +1,5 @@
 import React from "react";
+import dogDoorLogo from "./DogDoor.png";
 
 import "./home.scss";
 
@@ -7,14 +8,14 @@ const Home = () => {
     <>
       <div className="image">
         <div className="image__overlay">
-          <h1>Dog Door</h1>
-          <p>Pet Food</p>
+          <img src={dogDoorLogo} alt="dog door logo" />
+          <h1>Coming soon!</h1>
         </div>
       </div>
-      <div className="about">
+      {/* <div className="about">
         <p>fun</p>
       </div>
-      <div className="footer"></div>
+      <div className="footer"></div> */}
     </>
   );
 };
