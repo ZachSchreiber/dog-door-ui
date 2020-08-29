@@ -23,9 +23,7 @@
     flex-direction: column;
 
     img {
-      height: 50%;
-      width: 50%;
-    
+      height: 300px;    
     }
 
     h1 {
@@ -34,14 +32,14 @@
       margin-block-start: 0;
     }
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 850px) {
       h1 {
         margin-block-start: 40px;
         font-size: 3em;
       }
 
       img {
-        width: 80%
+        height: 200px;
       }
     }
   }
