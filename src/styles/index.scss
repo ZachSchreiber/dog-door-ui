@@ -1,5 +1,4 @@
 @import-normalize;
-@import "./core";
 
 html,
 body {
@@ -11,6 +10,7 @@ body {
   padding: 0;
   overflow: hidden;
   font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
 }
 
 #root {

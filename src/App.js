@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 //import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import Home from "./components/home";
-import About from "./components/about";
+import About from "./components/home/about-section";
 import Contact from "./components/contact";
 //import Drawer from "./components/drawer";
 
