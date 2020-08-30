@@ -1,5 +1,6 @@
 import React from "react";
 import dogDoorLogo from "./DogDoor.png";
+import AboutSection from "./about-section";
 
 import "./home.scss";
 
@@ -12,10 +13,8 @@ const Home = () => {
           <h1>Coming soon!</h1>
         </div>
       </div>
-      {/* <div className="about">
-        <p>fun</p>
-      </div>
-      <div className="footer"></div> */}
+      <AboutSection />
+      <div className="footer"></div>
     </>
   );
 };
