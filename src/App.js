@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Route, Switch } from "react-router-dom";
 //import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import Home from "./components/home";
