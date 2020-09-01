@@ -1,4 +1,4 @@
-import React, { createRef } from "react";
+import React from "react";
 import dogDoorLogo from "./DogDoor.png";
 import Header from "../header";
 import AboutSection from "./about-section";
