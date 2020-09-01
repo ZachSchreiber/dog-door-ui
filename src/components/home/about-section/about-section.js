@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBone, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
 import "./about-section.scss";
 
@@ -8,7 +10,13 @@ const About = () => {
   return (
     <div className={block}>
       <section className={`${block}__section-a`}>
-        <h2 className={`${block}__section-header`}>About A</h2>
+        <h2 className={`${block}__section-header`}>
+          <FontAwesomeIcon
+            icon={faMapMarkerAlt}
+            className={`${block}__section-header__icon`}
+          />
+          About A
+        </h2>
         <p className={`${block}__section-content`}>
           I'm baby actually lomo subway tile, lumbersexual PBR&B trust fund
           gluten-free letterpress everyday carry kinfolk microdosing stumptown
@@ -22,7 +30,13 @@ const About = () => {
       </section>
       <div className={`${block}__divider`} />
       <section className={`${block}__section-b`}>
-        <h2 className={`${block}__section-header`}>About B</h2>
+        <h2 className={`${block}__section-header`}>
+          <FontAwesomeIcon
+            icon={faBone}
+            className={`${block}__section-header__icon`}
+          />
+          About B
+        </h2>
         <p className={`${block}__section-content`}>
           I'm baby tousled narwhal sriracha kombucha, ethical meditation artisan
           vexillologist salvia fam kinfolk tbh. Ramps green juice cred raclette,

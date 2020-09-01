@@ -31,6 +31,11 @@
     margin-block-start: 0;
     color: $green-900;
     font-size: 30px;
+
+    &__icon {
+      margin-inline-end: 10px;
+      color: $green-900;
+    }
   }
 
   &__section-content {

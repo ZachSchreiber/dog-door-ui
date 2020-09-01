@@ -1,5 +1,6 @@
-import React from "react";
+import React, { createRef } from "react";
 import dogDoorLogo from "./DogDoor.png";
+import Header from "../header";
 import AboutSection from "./about-section";
 
 import "./home.scss";
@@ -7,6 +8,7 @@ import "./home.scss";
 const Home = () => {
   return (
     <>
+      <Header />
       <div className="image">
         <div className="image__overlay">
           <img src={dogDoorLogo} alt="dog door logo" />
