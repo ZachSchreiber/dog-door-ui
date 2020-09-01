@@ -2,7 +2,7 @@
   from {
     inset-inline-start: 0;
     inset-inline-end: auto;
-    transform: translate(-100%, 0);
+    transform: translate(100%, 0);
   }
 
   to {
@@ -27,6 +27,7 @@
   position: fixed;
   z-index: 9001;
   height: 100%;
+  right: 0;
   background: rgba($color: #000000, $alpha: 0.5);
   inset-block-start: 0;
   inset-inline-end: 0;
@@ -43,6 +44,7 @@
   height: 100%;
   position: fixed;
   inset-block: 0;
+  right: 0;
   z-index: 9001;
   inline-size: rem(300);
   overflow: auto;
@@ -57,7 +59,7 @@
   &--open {
     transform: translate(0, 0);
     visibility: visible;
-    width: 220px;
+    width: 300px;
 
     animation: drawer-animation 0.3s;
   }

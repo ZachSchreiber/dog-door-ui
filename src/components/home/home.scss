@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .image {
   //padding-block-start: 100px;
   background-image: url("https://images.squarespace-cdn.com/content/v1/565f7d5ae4b0860912bde007/1516217180277-SYPXN20IZA47LP432RYX/ke17ZwdGBToddI8pDm48kPquPBX41tQIAQy_d32CpDt7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UaC3Ej64K6U70TfG7-g7S2NDI6nfg4RNepYe_OFLEF2rmraFsHyr9B09bGJXbau2RA/image-asset.jpeg");
@@ -45,7 +47,32 @@
   }
 }
 
-.footer {
+.footer-section {
   height: 100%;
-  background-color: #dfdfdf;
+  background-color: $gray-100;
+  text-align: start;
+  padding-block-start: 100px;
+  padding-inline-start: 60px;
+
+  &__section-header {
+    font-family: $Header-font-main;
+    color: $green-900;
+    font-size: 45px;
+    margin-block-end: 0;
+  }
+
+  &__section-content {
+    font-size: 20px;
+    color: $gray-700;
+    width: 75%;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    padding-inline-start: 30px;
+    padding-inline-end: 30px;
+    &__section-content {
+      width: 100%;
+      padding-inline-end: 25px;
+    }
+  }
 }

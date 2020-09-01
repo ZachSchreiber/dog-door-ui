@@ -1,0 +1,74 @@
+@import "../../styles/variables.scss";
+
+.close-drawer {
+  display: flex;
+  justify-content: flex-end;
+
+  &__button {
+    margin-block-start: 20px;
+    margin-inline-end: 30px;
+    font-size: 26px;
+    border: 0;
+    background-color: #fff;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-block-start: 30px;
+  padding-inline-start: 20px;
+
+  a {
+    font-size: 26px;
+    text-decoration: none;
+    color: black;
+    margin-block-end: 10px;
+  }
+}
+
+.menu {
+  z-index: 1001;
+  position: fixed;
+  font-size: 80px;
+  top: 5px;
+  right: 30px;
+  color: $yellow-900;
+  cursor: pointer;
+
+  &:hover {
+    color: $yellow-700;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  height: 100px;
+  //background: rgba(70, 70, 70, 0.3);
+  color: #f1f1f1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  &__content {
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .menu {
+    font-size: 40px;
+    right: 20px;
+  }
+}
