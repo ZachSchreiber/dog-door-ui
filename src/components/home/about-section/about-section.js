@@ -15,7 +15,7 @@ const About = () => {
             icon={faBone}
             className={`${block}__section-header__icon`}
           />
-          BENEFITS OF RAW FOOD
+          WHY RAW FOOD?
           <FontAwesomeIcon
             icon={faBone}
             className={`${block}__section-header__icon`}

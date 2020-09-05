@@ -31,6 +31,7 @@
     margin-block-start: 0;
     color: $green-900;
     font-size: 30px;
+    white-space: nowrap;
 
     &__icon {
       margin: 0 20px;
@@ -43,10 +44,6 @@
     font-size: 20px;
     text-align: start;
   }
-
-  // &__content-title {
-
-  // }
 
   &__content-description {
     margin-bottom: 20px;
@@ -73,7 +70,7 @@
     }
 
     &__section-header {
-      font-size: 25px;
+      font-size: 20px;
     }
   }
 }
