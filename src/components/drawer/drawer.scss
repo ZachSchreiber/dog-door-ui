@@ -1,7 +1,5 @@
 @keyframes drawer-animation {
   from {
-    // inset-inline-start: 0;
-    // inset-inline-end: auto;
     transform: translate(100%, 0);
   }
 
@@ -54,8 +52,12 @@
   &--open {
     transform: translate(0, 0);
     visibility: visible;
-    width: 300px;
+    width: 400px;
 
     animation: drawer-animation 0.3s;
+
+    @media only screen and (max-width: 600px) {
+      width: 300px;
+    }
   }
 }
