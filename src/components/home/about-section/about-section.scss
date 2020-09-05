@@ -33,7 +33,7 @@
     font-size: 30px;
 
     &__icon {
-      margin-inline-end: 10px;
+      margin: 0 20px;
       color: $green-900;
     }
   }
@@ -41,6 +41,16 @@
   &__section-content {
     color: $gray-600;
     font-size: 20px;
+    text-align: start;
+  }
+
+  // &__content-title {
+
+  // }
+
+  &__content-description {
+    margin-bottom: 20px;
+    font-size: 18px;
   }
 
   @media only screen and (max-width: 1000px) {

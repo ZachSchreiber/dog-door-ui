@@ -1,12 +1,14 @@
 import React, { useState } from "react";
+import cn from "classnames";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import headerLogo from "../assets/DogDoorHeader-white.jpg";
 import Drawer from "../drawer";
 
 import "./header.scss";
 
-const Header = () => {
+const Header = ({ showHeader }) => {
   const [isOpen, setIsOpen] = useState(false);
   const onToggle = () => setIsOpen(!isOpen);
   return (
@@ -31,8 +33,14 @@ const Header = () => {
       <div className="menu" onClick={onToggle}>
         <FontAwesomeIcon icon={faBars} />
       </div>
-      <div className="header">
-        <div className="header__content">{/*<Link to={"/"}>Logo</Link>*/}</div>
+      <div
+        className={cn("header", showHeader ? "header--show" : "header--hide")}
+      >
+        <div className="header__content">
+          <Link to={"/"}>
+            <img src={headerLogo} alt="header logo" className="header__logo" />
+          </Link>
+        </div>
       </div>
     </>
   );

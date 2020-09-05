@@ -1,7 +1,7 @@
 @keyframes drawer-animation {
   from {
-    inset-inline-start: 0;
-    inset-inline-end: auto;
+    // inset-inline-start: 0;
+    // inset-inline-end: auto;
     transform: translate(100%, 0);
   }
 
@@ -29,11 +29,7 @@
   height: 100%;
   right: 0;
   background: rgba($color: #000000, $alpha: 0.5);
-  inset-block-start: 0;
-  inset-inline-end: 0;
-  inset-block-end: 0;
-  inset-inline-start: 0;
-
+  width: 0%;
   &--open {
     animation: overlay-animation 0.2s;
     width: 100%;
@@ -43,7 +39,6 @@
 .drawer {
   height: 100%;
   position: fixed;
-  inset-block: 0;
   right: 0;
   z-index: 9001;
   inline-size: rem(300);
