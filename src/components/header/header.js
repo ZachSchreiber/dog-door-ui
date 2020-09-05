@@ -34,7 +34,11 @@ const Header = ({ showHeader }) => {
         <FontAwesomeIcon icon={faBars} />
       </div>
       <div
-        className={cn("header", showHeader ? "header--show" : "header--hide")}
+        className={cn(
+          "header",
+          showHeader === "show" && "header--show",
+          showHeader === "hide" && "header--hide"
+        )}
       >
         <div className="header__content">
           <Link to={"/"}>

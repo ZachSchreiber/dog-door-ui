@@ -8,16 +8,21 @@ import "./home.scss";
 
 class Home extends Component {
   state = {
-    showHeader: false
+    showHeader: ""
   };
 
   handleScroll = () => {
     const mainRefPosition = ReactDOM.findDOMNode(
       this.refs.mainRef
     ).getBoundingClientRect().bottom;
-    mainRefPosition <= 300
-      ? this.setState({ showHeader: true })
-      : this.setState({ showHeader: false });
+    if (mainRefPosition <= 300) {
+      this.setState({ showHeader: "show" });
+    } else {
+      this.setState(prevState => ({
+        showHeader:
+          prevState.showHeader === "show" ? "hide" : prevState.showHeader
+      }));
+    }
   };
 
   componentDidMount() {
