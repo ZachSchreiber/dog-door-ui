@@ -16,12 +16,12 @@
   &__section-a,
   &__section-b {
     width: 50%;
-    font-family: $Header-font-main;
     padding: 0 60px;
   }
 
   &__section-header {
     margin-block-start: 0;
+    font-family: $Header-font-main;
     color: $green-900;
     font-size: 30px;
     white-space: nowrap;
@@ -36,11 +36,11 @@
     color: $gray-600;
     font-size: 20px;
     text-align: start;
+    font-size: 18px;
   }
 
   &__content-description {
     margin-bottom: 20px;
-    font-size: 18px;
   }
 
   @media only screen and (max-width: 1000px) {
