@@ -4,7 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 0 20px 0 10px;
+  height: 90px;
   &__button {
     margin: 0;
     font-size: 30px;
@@ -12,7 +13,6 @@
     color: $green-900;
     background-color: #fff;
     height: 30px;
-    padding-top: 10px;
 
     &:hover {
       cursor: pointer;
@@ -118,6 +118,7 @@
 
 @media only screen and (max-width: 600px) {
   .close-drawer {
+    height: 60px;
     &__button {
       padding-top: 0;
     }
