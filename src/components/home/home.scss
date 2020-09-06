@@ -47,13 +47,13 @@
   height: 100%;
   background-color: $gray-100;
   text-align: start;
-  padding: 100px 60px;
+  padding: 40px 60px 80px 60px;
 
   &__section-header {
     font-family: $Header-font-main;
     color: $green-900;
     font-size: 45px;
-    margin-block-end: 0;
+    margin: 0;
   }
 
   &__section-content {
@@ -63,8 +63,7 @@
   }
 
   @media only screen and (max-width: 1000px) {
-    padding-inline-start: 30px;
-    padding-inline-end: 30px;
+    padding: 30px;
     &__section-content {
       width: 100%;
       padding-inline-end: 25px;

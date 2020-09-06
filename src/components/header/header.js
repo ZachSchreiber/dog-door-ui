@@ -6,7 +6,9 @@ import {
   faBars,
   faTimes,
   faAddressCard,
-  faPaperPlane
+  faPaperPlane,
+  faSeedling,
+  faStoreAlt
 } from "@fortawesome/free-solid-svg-icons";
 import headerLogo from "../assets/DogDoorHeader-white.jpg";
 import dogDoorDrawer from "../assets/DogDoorHeader-black.jpg";
@@ -33,13 +35,21 @@ const Header = ({ showHeader }) => {
           </button>
         </div>
         <section className="links">
-          <Link to={"/"}>
+          <Link className="links__item" to={"/"}>
+            <FontAwesomeIcon icon={faStoreAlt} />
+            <span className="links__text">Shop</span>
+          </Link>
+          <Link className="links__item" to={"/"}>
             <FontAwesomeIcon icon={faAddressCard} />
             <span className="links__text">About</span>
           </Link>
-          <Link to={"/"}>
+          <Link className="links__item" to={"/"}>
             <FontAwesomeIcon icon={faPaperPlane} />
             <span className="links__text">Contact</span>
+          </Link>
+          <Link className="links__item" to={"/"}>
+            <FontAwesomeIcon icon={faSeedling} />
+            <span className="links__text">Farmers</span>
           </Link>
         </section>
       </Drawer>

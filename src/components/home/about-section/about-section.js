@@ -64,7 +64,7 @@ const About = () => {
             icon={faBone}
             className={`${block}__section-header__icon`}
           />
-          About B
+          WHY LOCAL?
           <FontAwesomeIcon
             icon={faBone}
             className={`${block}__section-header__icon`}

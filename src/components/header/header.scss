@@ -16,6 +16,7 @@
 
     &:hover {
       cursor: pointer;
+      color: $green-600;
     }
 
     &:focus {
@@ -34,6 +35,12 @@
   padding-inline-start: 20px;
   background-color: $gray-700;
   height: 100%;
+
+  &__item {
+    &:hover {
+      color: $yellow-700;
+    }
+  }
 
   &__text {
     margin-left: 25px;
