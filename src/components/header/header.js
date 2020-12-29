@@ -10,8 +10,7 @@ import {
   faSeedling,
   faStoreAlt
 } from "@fortawesome/free-solid-svg-icons";
-import headerLogo from "../assets/DogDoorHeader-white.jpg";
-import dogDoorDrawer from "../assets/DogDoorHeader-black.jpg";
+import pawSvg from "../assets/paw-logo.svg";
 import Drawer from "../drawer";
 
 import "./header.scss";
@@ -29,7 +28,10 @@ const Header = ({ showHeader }) => {
         position={Drawer.POSITIONS.end}
       >
         <div className="close-drawer">
-          <img src={dogDoorDrawer} alt="header logo" className="header__logo" />
+          <div className="close-drawer__title-container">
+            <span className="close-drawer__title-text">Menu</span>
+            <img src={pawSvg} alt="drawer logo" className="header__logo" />
+          </div>
           <button className="close-drawer__button">
             <FontAwesomeIcon icon={faTimes} onClick={onToggle} />
           </button>
@@ -54,6 +56,7 @@ const Header = ({ showHeader }) => {
         </section>
       </Drawer>
       <div className="menu" onClick={onToggle}>
+        <span className="menu__text">Menu</span>
         <FontAwesomeIcon icon={faBars} />
       </div>
       <div
@@ -65,7 +68,7 @@ const Header = ({ showHeader }) => {
       >
         <div className="header__content">
           <Link to={"/"}>
-            <img src={headerLogo} alt="header logo" className="header__logo" />
+            <h1 className="header__text">Dog Door Pet Food</h1>
           </Link>
         </div>
       </div>

@@ -4,19 +4,32 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px 0 10px;
+  padding: 0 20px 0 0;
   height: 90px;
+
+  &__title-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title-text {
+    color: $gray-700;
+    margin-inline-start: 20px;
+    margin-inline-end: 10px;
+    font-size: 2em;
+  }
+
   &__button {
     margin: 0;
     font-size: 30px;
     border: 0;
-    color: $green-900;
+    color: $gray-500;
     background-color: #fff;
     height: 30px;
 
     &:hover {
       cursor: pointer;
-      color: $green-600;
+      color: $blue-900;
     }
 
     &:focus {
@@ -38,7 +51,7 @@
 
   &__item {
     &:hover {
-      color: $yellow-700;
+      color: $new-yellow-900;
     }
   }
 
@@ -55,27 +68,33 @@
 }
 
 .menu {
-  z-index: 1001;
+  z-index: 9003;
+  display: flex;
+  align-items: center;
   position: fixed;
   font-size: 60px;
-  top: 0;
+  top: 15px;
   right: 30px;
-  color: $yellow-900;
+  color: $gray-500;
   cursor: pointer;
 
   &:hover {
-    color: $yellow-700;
+    color: $blue-900;
+  }
+
+  &__text {
+    margin-right: 15px;
+    font-size: 0.5em;
   }
 }
 
 .header {
+  z-index: 9002;
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 1000;
   height: 90px;
-  background: $gray-500;
-  color: #f1f1f1;
+  border-bottom: 1px solid $gray-300;
+  background: #fff;
   position: fixed;
   top: 0;
   width: 100%;
@@ -111,15 +130,17 @@
     }
   }
 
-  &__content {
-    a {
-      color: #fff;
-      text-decoration: none;
-    }
-  }
-
   &__logo {
     height: 60px;
+  }
+
+  &__text {
+    margin-left: 60px;
+  }
+
+  a {
+    color: $blue-900;
+    text-decoration: none;
   }
 }
 
@@ -131,6 +152,7 @@
     }
   }
   .menu {
+    top: 10px;
     font-size: 40px;
     right: 20px;
   }
@@ -140,6 +162,11 @@
 
     &__logo {
       height: 40px;
+    }
+
+    &__text {
+      font-size: 1em;
+      margin-left: 25px;
     }
   }
 }

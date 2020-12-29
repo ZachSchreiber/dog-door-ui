@@ -1,4 +1,5 @@
 import React from "react";
+import cn from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBone } from "@fortawesome/free-solid-svg-icons";
 
@@ -6,9 +7,16 @@ import "./about-section.scss";
 
 const block = "about-section";
 
-const About = () => {
+const About = React.forwardRef((props, ref) => {
   return (
-    <div className={block}>
+    <div
+      ref={ref}
+      className={cn(
+        block,
+        props.showAbout === "show" && `${block}--show`,
+        props.showAbout === "hide" && `${block}--hide`
+      )}
+    >
       <section className={`${block}__section-a`}>
         <h2 className={`${block}__section-header`}>
           <FontAwesomeIcon
@@ -83,6 +91,6 @@ const About = () => {
       </section>
     </div>
   );
-};
+});
 
 export default About;
