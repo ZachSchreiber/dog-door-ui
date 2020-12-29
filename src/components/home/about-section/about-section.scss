@@ -1,6 +1,8 @@
 @import "../../../styles/variables.scss";
 
 .about-section {
+  position: relative;
+  overflow: hidden;
   padding-block: 50px;
   padding-inline: 20px;
   display: flex;
@@ -46,7 +48,30 @@
     }
   }
 
+  &__swiggle {
+    position: absolute;
+    transform: rotate(90deg);
+    width: 400px;
+    top: 200px;
+    left: -140px;
+  }
+
+  &__circle--yellow {
+    position: absolute;
+    width: 800px;
+    top: -200px;
+    left: -200px;
+  }
+
+  &__circle--white {
+    position: absolute;
+    width: 500px;
+    bottom: -250px;
+    right: -250px;
+  }
+
   &__content-container {
+    z-index: 1000;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -83,6 +108,25 @@
   }
 
   @media only screen and (max-width: 1250px) {
+    &__circle--yellow {
+      width: 400px;
+      top: -200px;
+      left: -200px;
+    }
+
+    &__swiggle {
+      width: 200px;
+      top: 20px;
+      left: -60px;
+    }
+
+    &__circle--white {
+      position: absolute;
+      width: 250px;
+      bottom: -100px;
+      right: -100px;
+    }
+
     &__content-container {
       flex-direction: column;
       align-items: center;
@@ -103,6 +147,10 @@
     height: fit-content;
     &__image {
       height: 300px;
+    }
+
+    &__circle--white {
+      display: none;
     }
 
     &__text-container {

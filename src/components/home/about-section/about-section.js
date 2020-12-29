@@ -1,6 +1,9 @@
 import React from "react";
 import cn from "classnames";
 import brownDog from "../../assets/we-are-brown-dog.png";
+import whispyCircle from "../../assets/whispy-circle.svg";
+import whispyCircleWhite from "../../assets/whispy-circle-white.svg";
+import swiggleBlue from "../../assets/swiggle-blue.svg";
 
 import "./about-section.scss";
 
@@ -16,6 +19,12 @@ const About = React.forwardRef((props, ref) => {
         props.showAbout === "hide" && `${block}--hide`
       )}
     >
+      <img
+        src={whispyCircle}
+        className={`${block}__circle--yellow`}
+        alt="yellow circle"
+      />
+      <img src={swiggleBlue} className={`${block}__swiggle`} alt="swiggle" />
       <div className={`${block}__content-container`}>
         <img src={brownDog} className={`${block}__image`} alt="brown dog" />
         <div className={`${block}__text-container`}>
@@ -27,6 +36,11 @@ const About = React.forwardRef((props, ref) => {
           </p>
         </div>
       </div>
+      <img
+        src={whispyCircleWhite}
+        className={`${block}__circle--white`}
+        alt="white circle"
+      />
     </div>
   );
 });
