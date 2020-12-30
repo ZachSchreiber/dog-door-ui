@@ -94,8 +94,7 @@
 
   &__info {
     font-size: 8em;
-    color: $gray-600;
-    font-family: "Istok Web", sans-serif;
+    color: $blue-900;
     margin-block-start: 50px;
   }
 
@@ -125,34 +124,6 @@
     &__info {
       margin-block-start: 40px;
       font-size: 3em;
-    }
-  }
-}
-
-.footer-section {
-  height: 100%;
-  background-color: $gray-100;
-  text-align: start;
-  padding: 40px 60px 80px 60px;
-
-  &__section-header {
-    font-family: $Header-font-main;
-    color: $green-900;
-    font-size: 45px;
-    margin: 0;
-  }
-
-  &__section-content {
-    font-size: 20px;
-    color: $gray-700;
-    width: 75%;
-  }
-
-  @media only screen and (max-width: 1000px) {
-    padding: 30px;
-    &__section-content {
-      width: 100%;
-      padding-inline-end: 25px;
     }
   }
 }

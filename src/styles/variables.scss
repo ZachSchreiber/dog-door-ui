@@ -31,5 +31,27 @@ $yellow-200: #fcf7be;
 $blue-900: #004aad;
 $new-yellow-900: #f2cc59;
 
+@font-face {
+  font-family: "sailors_condensedregular";
+  src: url("./fonts/sailors_condensed-webfont.eot");
+  src: url("./fonts/sailors_condensed-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("./fonts/sailors_condensed-webfont.woff2") format("woff2"),
+    url("./fonts/sailors_condensed-webfont.woff") format("woff"),
+    url("./fonts/sailors_condensed-webfont.ttf") format("truetype"),
+    url("./fonts/sailors_condensed-webfont.svg#sailors_condensedregular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("./fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 //fonts
-$Header-font-main: "Istok Web", sans-serif;
+$font-header: "sailors_condensedregular";
+$font-main: "montserrat";

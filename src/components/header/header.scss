@@ -3,6 +3,7 @@
 .close-drawer {
   display: flex;
   justify-content: space-between;
+  background-color: #fff;
   align-items: center;
   padding: 0 20px 0 0;
   height: 90px;
@@ -13,23 +14,24 @@
   }
 
   &__title-text {
-    color: $gray-700;
+    color: $blue-900;
     margin-inline-start: 20px;
     margin-inline-end: 10px;
     font-size: 2em;
+    font-family: $font-header;
   }
 
   &__button {
     margin: 0;
     font-size: 30px;
     border: 0;
-    color: $gray-500;
+    color: $blue-900;
     background-color: #fff;
     height: 30px;
 
     &:hover {
       cursor: pointer;
-      color: $blue-900;
+      color: $new-yellow-900;
     }
 
     &:focus {
@@ -41,13 +43,13 @@
 
 .links {
   display: flex;
-  font-family: "Istok Web", sans-serif;
   flex-direction: column;
   align-items: flex-start;
   padding-block-start: 30px;
   padding-inline-start: 20px;
-  background-color: $gray-700;
+  background-color: $blue-900;
   height: 100%;
+  font-family: $font-header;
 
   &__item {
     &:hover {
@@ -74,8 +76,9 @@
   position: fixed;
   font-size: 60px;
   top: 15px;
+  color: $blue-900;
   right: 30px;
-  color: $gray-500;
+
   cursor: pointer;
 
   &:hover {
@@ -85,6 +88,7 @@
   &__text {
     margin-right: 15px;
     font-size: 0.5em;
+    font-family: $font-header;
   }
 }
 

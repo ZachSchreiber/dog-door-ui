@@ -114,7 +114,6 @@ class Drawer extends React.Component<DrawerProps> {
 
   handleOverlayClick = () => {
     this.handleClose(false, INTERACTIONS_AFFORDANCE.OVERLAY);
-    console.log("clicked");
   };
 
   renderOverlay = () => {

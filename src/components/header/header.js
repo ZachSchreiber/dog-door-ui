@@ -10,7 +10,7 @@ import {
   faSeedling,
   faStoreAlt
 } from "@fortawesome/free-solid-svg-icons";
-import pawSvg from "../assets/paw-logo.svg";
+import pawSvg from "../assets/paw-logo-yellow.svg";
 import Drawer from "../drawer";
 
 import "./header.scss";
