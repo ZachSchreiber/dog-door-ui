@@ -2,7 +2,6 @@
 
 .article {
   width: 250px;
-  //overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,7 +28,7 @@
   &__title {
     color: $blue-900;
     font-size: 2em;
-    margin-block-end: 0;
+    margin-bottom: 0;
   }
 
   &__content {

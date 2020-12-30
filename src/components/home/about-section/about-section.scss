@@ -4,13 +4,11 @@
 .about-section {
   position: relative;
   overflow: hidden;
-  padding-block: 50px;
-  padding-inline: 20px;
+  padding: 50px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  opacity: 0;
   background-color: $blue-900;
 
   &--show {
@@ -141,7 +139,9 @@
   }
 
   @media only screen and (max-width: 600px) {
-    padding-block: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
     height: fit-content;
     &__image {
       height: 300px;

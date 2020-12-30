@@ -12,22 +12,17 @@ class Home extends Component {
   constructor() {
     super();
     this.mainRef = React.createRef();
-    this.aboutRef = React.createRef();
     this.handleScroll = this.handleScroll.bind(this);
   }
 
   state = {
-    showHeader: "",
-    showAbout: ""
+    showHeader: ""
   };
 
   handleScroll = () => {
     const mainRefPosition = ReactDOM.findDOMNode(
       this.mainRef.current
     ).getBoundingClientRect().bottom;
-    const aboutRefPosition = ReactDOM.findDOMNode(
-      this.aboutRef.current
-    ).getBoundingClientRect().top;
     if (mainRefPosition <= 300) {
       this.setState({ showHeader: "show" });
     } else {
@@ -36,26 +31,9 @@ class Home extends Component {
           prevState.showHeader === "show" ? "hide" : prevState.showHeader
       }));
     }
-    if (aboutRefPosition < 800) {
-      this.setState({ showAbout: "show" });
-    } else {
-      this.setState(prevState => ({
-        showAbout: prevState.showAbout === "show" ? "hide" : prevState.showAbout
-      }));
-    }
   };
 
   componentDidMount() {
-    const aboutRefPosition = ReactDOM.findDOMNode(
-      this.aboutRef.current
-    ).getBoundingClientRect().top;
-    if (aboutRefPosition < 700) {
-      this.setState({ showAbout: "show" });
-    } else {
-      this.setState(prevState => ({
-        showAbout: prevState.showAbout === "show" ? "hide" : prevState.showAbout
-      }));
-    }
     window.addEventListener("scroll", this.handleScroll);
   }
 
@@ -78,7 +56,7 @@ class Home extends Component {
           </div>
           <h1 className="main__info">Coming soon!</h1>
         </div>
-        <AboutSection ref={this.aboutRef} showAbout={this.state.showAbout} />
+        <AboutSection />
         <TryOurProducts />
       </>
     );

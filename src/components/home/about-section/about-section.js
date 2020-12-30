@@ -9,16 +9,9 @@ import "./about-section.scss";
 
 const block = "about-section";
 
-const About = React.forwardRef((props, ref) => {
+const About = () => {
   return (
-    <div
-      ref={ref}
-      className={cn(
-        block,
-        props.showAbout === "show" && `${block}--show`,
-        props.showAbout === "hide" && `${block}--hide`
-      )}
-    >
+    <div className={cn(block)}>
       <img
         src={whispyCircle}
         className={`${block}__circle--yellow`}
@@ -43,6 +36,6 @@ const About = React.forwardRef((props, ref) => {
       />
     </div>
   );
-});
+};
 
 export default About;

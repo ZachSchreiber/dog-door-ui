@@ -15,8 +15,8 @@
 
   &__title-text {
     color: $blue-900;
-    margin-inline-start: 20px;
-    margin-inline-end: 10px;
+    margin-left: 20px;
+    margin-right: 10px;
     font-size: 2em;
     font-family: $font-header;
   }
@@ -45,8 +45,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-block-start: 30px;
-  padding-inline-start: 20px;
+  padding-top: 30px;
+  padding-left: 20px;
   background-color: $blue-900;
   height: 100%;
   font-family: $font-header;
@@ -65,7 +65,7 @@
     font-size: 28px;
     text-decoration: none;
     color: #fff;
-    margin-block-end: 10px;
+    margin-bottom: 10px;
   }
 }
 

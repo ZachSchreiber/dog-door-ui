@@ -95,12 +95,12 @@
   &__info {
     font-size: 8em;
     color: $blue-900;
-    margin-block-start: 50px;
+    margin-top: 50px;
   }
 
   @media only screen and (max-width: 900px) {
     &__info {
-      margin-block-start: 40px;
+      margin-top: 40px;
       font-size: 5em;
     }
   }
@@ -122,7 +122,7 @@
     }
 
     &__info {
-      margin-block-start: 40px;
+      margin-top: 40px;
       font-size: 3em;
     }
   }
