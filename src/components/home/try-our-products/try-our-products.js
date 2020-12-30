@@ -1,8 +1,8 @@
 import React from "react";
-import Article from "../article";
-import bluePaw from "../assets/paw-logo-blue.svg";
-import beerBottle from "../assets/beer-bottle.svg";
-import dogBowl from "../assets/dog-bowl.svg";
+import Article from "../../article";
+import bluePaw from "../../assets/paw-logo-blue.png";
+import beerBottle from "../../assets/beer-bottle.png";
+import dogBowl from "../../assets/dog-bowl.png";
 
 import "./try-our-products.scss";
 

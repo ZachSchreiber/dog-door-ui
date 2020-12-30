@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import logoBase from "../assets/new-logo-no-paw.svg";
-import pawSvg from "../assets/paw-logo-yellow.svg";
+import logoBase from "../assets/new-logo-no-paw.png";
+import pawSvg from "../assets/paw-logo-yellow.png";
 import Header from "../header";
 import AboutSection from "./about-section";
-import TryOurProducts from "../try-our-products";
+import TryOurProducts from "./try-our-products";
 
 import "./home.scss";
 

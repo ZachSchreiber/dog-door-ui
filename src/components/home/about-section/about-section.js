@@ -1,9 +1,9 @@
 import React from "react";
 import cn from "classnames";
 import brownDog from "../../assets/we-are-brown-dog.png";
-import whispyCircle from "../../assets/whispy-circle-yellow.svg";
-import whispyCircleWhite from "../../assets/whispy-circle-white.svg";
-import swiggleBlue from "../../assets/swiggle-blue.svg";
+import whispyCircle from "../../assets/whispy-circle-yellow.png";
+import whispyCircleWhite from "../../assets/whispy-circle-white.png";
+import swiggleBlue from "../../assets/swiggle-blue.png";
 
 import "./about-section.scss";
 
