@@ -1,0 +1,184 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/h3-base-styles";
+
+.get-in-touch {
+  overflow: hidden;
+  padding: 50px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $blue-900;
+
+  &--show {
+    animation: about-show-animation 0.5s;
+    opacity: 1;
+    transform: translateY(rem(0));
+  }
+
+  &--hide {
+    animation: about-hide-animation 0.5s;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  @keyframes about-show-animation {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(rem(0));
+    }
+  }
+
+  @keyframes about-hide-animation {
+    from {
+      opacity: 1;
+      transform: translateY(rem(0));
+    }
+
+    to {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+
+  &__image-container {
+    position: relative;
+    height: 100%;
+  }
+
+  &__swiggle {
+    position: absolute;
+    width: 400px;
+    top: 40px;
+    left: 220px;
+    z-index: 2;
+  }
+
+  &__circle--yellow {
+    position: absolute;
+    width: 550px;
+    top: -350px;
+    left: -300px;
+  }
+
+  &__circle--white {
+    position: absolute;
+    width: 600px;
+    top: -150px;
+    left: 300px;
+  }
+
+  &__image {
+    height: 600px;
+    z-index: 1;
+  }
+
+  &__text-container {
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  &__title {
+    @include h3-base-styles;
+    align-self: flex-end;
+    color: $blue-900;
+    background-color: $new-yellow-900;
+  }
+
+  &__description {
+    text-align: right;
+    color: #fff;
+    font-size: 1.5em;
+    margin: 0;
+
+    dt {
+      margin-top: 20px;
+      font-family: $font-header;
+      color: $new-yellow-900;
+    }
+  }
+
+  &__social-icon {
+    width: 30px;
+    margin-left: 15px;
+  }
+
+  @media only screen and (max-width: 1250px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__circle--yellow {
+      width: 350px;
+      top: -20px;
+      left: -400px;
+    }
+
+    &__swiggle {
+      display: none;
+    }
+
+    &__circle--white {
+      width: 400px;
+      top: 50px;
+      left: -300px;
+    }
+
+    &__image {
+      height: 400px;
+    }
+
+    &__text-container {
+      width: 80%;
+    }
+
+    &__title {
+      align-self: center;
+    }
+
+    &__description {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: fit-content;
+
+    &__image {
+      height: 300px;
+    }
+
+    &__circle--yellow {
+      bottom: -200px;
+      left: -300px;
+      width: 300px;
+    }
+
+    &__text-container {
+      width: 100%;
+    }
+
+    &__description {
+      font-size: 1em;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    &__image {
+      height: 200px;
+    }
+
+    &__circle--white {
+      width: 300px;
+    }
+  }
+}

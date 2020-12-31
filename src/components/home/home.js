@@ -6,6 +6,7 @@ import Header from "../header";
 import AboutSection from "./about-section";
 import TryOurProducts from "./try-our-products";
 import WhereToPurchase from "./where-to-purchase";
+import GetInTouch from "./get-in-touch";
 
 import "./home.scss";
 
@@ -60,6 +61,7 @@ class Home extends Component {
         <AboutSection />
         <TryOurProducts />
         <WhereToPurchase />
+        <GetInTouch />
       </>
     );
   }
