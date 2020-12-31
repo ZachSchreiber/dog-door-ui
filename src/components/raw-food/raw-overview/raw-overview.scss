@@ -56,10 +56,11 @@
 
   &__swiggle--yellow {
     position: absolute;
-    transform: rotate(20deg);
+    transform: rotate(30deg);
     width: 400px;
-    top: -100px;
+    top: 30px;
     right: -100px;
+    z-index: 2;
   }
 
   &__circle--yellow {
@@ -72,7 +73,7 @@
   &__circle--white {
     position: absolute;
     width: 500px;
-    bottom: -250px;
+    top: -250px;
     right: -250px;
   }
 
@@ -125,8 +126,8 @@
 
     &__circle--white {
       position: absolute;
-      width: 250px;
-      bottom: -100px;
+      width: 350px;
+      top: -100px;
       right: -100px;
     }
 
@@ -155,13 +156,13 @@
     }
 
     &__circle--white {
-      display: none;
+      width: 200px;
     }
 
     &__swiggle--yellow {
       width: 200px;
       top: -80px;
-      right: -50px;
+      right: 0;
     }
 
     &__text-container {
