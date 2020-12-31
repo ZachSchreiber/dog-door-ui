@@ -1,6 +1,5 @@
 import React from "react";
 import cn from "classnames";
-import useScroll from "../../../utils/use-scroll";
 import Article from "../../article";
 import bluePaw from "../../assets/paw-logo-blue.png";
 import beerBottle from "../../assets/beer-bottle.png";
@@ -11,17 +10,10 @@ import "./try-our-products.scss";
 const block = "try-our-products";
 
 const TryOurProducts = () => {
-  const [bbox, ref] = useScroll();
-
   return (
-    <div className={block} ref={ref}>
+    <div className={block}>
       <h2 className={`${block}__title`}>Our Products</h2>
-      <div
-        className={cn(
-          `${block}__article-container`,
-          bbox.top < 500 ? `${block}--show` : `${block}--hide`
-        )}
-      >
+      <div className={cn(`${block}__article-container`, `${block}--show`)}>
         <Article
           image={dogBowl}
           title={"RAW FOOD"}
