@@ -5,13 +5,17 @@ import "./article.scss";
 
 const block = "article";
 
-const Article = ({ image, title, content, isPaw = false }) => {
+const Article = ({ image, title, content, isPaw = false, imageStyleName }) => {
   return (
     <div className={block}>
       <div className={`${block}__image-container`}>
         <img
           src={image}
-          className={cn(`${block}__image`, isPaw && `${block}__image--paw`)}
+          className={cn(
+            `${block}__image`,
+            isPaw && `${block}__image--paw`,
+            imageStyleName
+          )}
           alt={title}
         />
       </div>

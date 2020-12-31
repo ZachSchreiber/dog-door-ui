@@ -12,7 +12,7 @@ const block = "try-our-products";
 const TryOurProducts = () => {
   return (
     <div className={block}>
-      <h2 className={`${block}__title`}>Our Products</h2>
+      <h2 className={`${block}__title`}>OUR PRODUCTS</h2>
       <div className={cn(`${block}__article-container`, `${block}--show`)}>
         <Article
           image={dogBowl}

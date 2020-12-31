@@ -5,6 +5,7 @@ import rawBowl from "../../assets/raw-bowl.png";
 import whispyCircle from "../../assets/whispy-circle-yellow.png";
 import whispyCircleWhite from "../../assets/whispy-circle-white.png";
 import swiggleBlue from "../../assets/swiggle-blue.png";
+import swiggleYellow from "../../assets/swiggle.png";
 
 import "./raw-overview.scss";
 
@@ -21,6 +22,11 @@ const RawOverview = () => {
         alt="yellow circle"
       />
       <img src={swiggleBlue} className={`${block}__swiggle`} alt="swiggle" />
+      <img
+        src={swiggleYellow}
+        className={`${block}__swiggle--yellow`}
+        alt="swiggle"
+      />
       <div
         className={cn(
           `${block}__content-container`,

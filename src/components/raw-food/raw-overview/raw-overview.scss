@@ -54,6 +54,14 @@
     left: -140px;
   }
 
+  &__swiggle--yellow {
+    position: absolute;
+    transform: rotate(20deg);
+    width: 400px;
+    top: -100px;
+    right: -100px;
+  }
+
   &__circle--yellow {
     position: absolute;
     width: 800px;
@@ -148,6 +156,12 @@
 
     &__circle--white {
       display: none;
+    }
+
+    &__swiggle--yellow {
+      width: 200px;
+      top: -80px;
+      right: -50px;
     }
 
     &__text-container {
