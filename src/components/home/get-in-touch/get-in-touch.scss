@@ -103,6 +103,15 @@
       font-family: $font-header;
       color: $new-yellow-900;
     }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   &__social-icon {

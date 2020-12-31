@@ -53,9 +53,15 @@ const WhereToPurchase = () => {
             />
           </dd>
           <dt>EMAIL</dt>
-          <dd>dogdoorpetfood@gmail.com</dd>
+          <dd>
+            <a href="mailto:dogdoorpetfood@gmail.com">
+              dogdoorpetfood@gmail.com
+            </a>
+          </dd>
           <dt>PHONE NUMBER</dt>
-          <dd>(919) 808-2545</dd>
+          <dd>
+            <a href="tel:9198082545">(919) 808-2545</a>
+          </dd>
         </dl>
       </div>
     </div>
