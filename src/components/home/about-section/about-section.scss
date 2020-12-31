@@ -20,13 +20,13 @@
   &--hide {
     animation: about-hide-animation 0.5s;
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
 
   @keyframes about-show-animation {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(30px);
     }
 
     to {

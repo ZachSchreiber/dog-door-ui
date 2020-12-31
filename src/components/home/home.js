@@ -12,17 +12,27 @@ class Home extends Component {
   constructor() {
     super();
     this.mainRef = React.createRef();
+    this.aboutRef = React.createRef();
+    this.ourProductsRef = React.createRef();
     this.handleScroll = this.handleScroll.bind(this);
   }
 
   state = {
-    showHeader: ""
+    showHeader: "",
+    showAbout: "show",
+    showProducts: ""
   };
 
   handleScroll = () => {
     const mainRefPosition = ReactDOM.findDOMNode(
       this.mainRef.current
     ).getBoundingClientRect().bottom;
+    // const aboutRefPosition = ReactDOM.findDOMNode(
+    //   this.aboutRef.current
+    // ).getBoundingClientRect().top;
+    const ourProductsPosition = ReactDOM.findDOMNode(
+      this.ourProductsRef.current
+    ).getBoundingClientRect().top;
     if (mainRefPosition <= 300) {
       this.setState({ showHeader: "show" });
     } else {
@@ -31,10 +41,32 @@ class Home extends Component {
           prevState.showHeader === "show" ? "hide" : prevState.showHeader
       }));
     }
+    // if (aboutRefPosition < 300) {
+    //   this.setState({ showAbout: "show" });
+    // } else {
+    //   this.setState(prevState => ({
+    //     showAbout: prevState.showAbout === "show" ? "hide" : prevState.showAbout
+    //   }));
+    // }
+    if (ourProductsPosition < 400) {
+      this.setState({ showProducts: "show" });
+    } else {
+      this.setState(prevState => ({
+        showProducts:
+          prevState.showProducts === "show" ? "hide" : prevState.showProducts
+      }));
+    }
   };
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
+    // const aboutRefPosition = ReactDOM.findDOMNode(
+    //   this.aboutRef.current
+    // ).getBoundingClientRect().top;
+    // console.log(aboutRefPosition);
+    // if (aboutRefPosition < 300) {
+    //   this.setState({ showAbout: "show" });
+    // }
   }
 
   componentWillUnmount() {
@@ -56,8 +88,11 @@ class Home extends Component {
           </div>
           <h1 className="main__info">Coming soon!</h1>
         </div>
-        <AboutSection />
-        <TryOurProducts />
+        <AboutSection ref={this.aboutRef} showAbout={this.state.showAbout} />
+        <TryOurProducts
+          ref={this.ourProductsRef}
+          showAbout={this.state.showProducts}
+        />
       </>
     );
   }

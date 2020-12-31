@@ -9,16 +9,21 @@ import "./about-section.scss";
 
 const block = "about-section";
 
-const About = () => {
+const About = React.forwardRef((props, ref) => {
   return (
-    <div className={cn(block)}>
+    <div ref={ref} className={block}>
       <img
         src={whispyCircle}
         className={`${block}__circle--yellow`}
         alt="yellow circle"
       />
       <img src={swiggleBlue} className={`${block}__swiggle`} alt="swiggle" />
-      <div className={`${block}__content-container`}>
+      <div
+        className={cn(
+          `${block}__content-container`,
+          props.showAbout === "show" ? `${block}--show` : `${block}--hide`
+        )}
+      >
         <img src={brownDog} className={`${block}__image`} alt="brown dog" />
         <div className={`${block}__text-container`}>
           <h2 className={`${block}__title`}>Who We Are</h2>
@@ -36,6 +41,6 @@ const About = () => {
       />
     </div>
   );
-};
+});
 
 export default About;
