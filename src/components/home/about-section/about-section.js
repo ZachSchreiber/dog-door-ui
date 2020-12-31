@@ -1,5 +1,6 @@
 import React from "react";
 import cn from "classnames";
+import useScroll from "../../../utils/use-scroll";
 import brownDog from "../../assets/we-are-brown-dog.png";
 import whispyCircle from "../../assets/whispy-circle-yellow.png";
 import whispyCircleWhite from "../../assets/whispy-circle-white.png";
@@ -9,7 +10,9 @@ import "./about-section.scss";
 
 const block = "about-section";
 
-const About = React.forwardRef((props, ref) => {
+const About = () => {
+  const [bbox, ref] = useScroll();
+
   return (
     <div ref={ref} className={block}>
       <img
@@ -21,7 +24,7 @@ const About = React.forwardRef((props, ref) => {
       <div
         className={cn(
           `${block}__content-container`,
-          props.showAbout === "show" ? `${block}--show` : `${block}--hide`
+          bbox.top < 500 ? `${block}--show` : `${block}--hide`
         )}
       >
         <img src={brownDog} className={`${block}__image`} alt="brown dog" />
@@ -41,6 +44,6 @@ const About = React.forwardRef((props, ref) => {
       />
     </div>
   );
-});
+};
 
 export default About;
