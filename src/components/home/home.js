@@ -5,6 +5,7 @@ import pawSvg from "../assets/paw-logo-yellow.png";
 import Header from "../header";
 import AboutSection from "./about-section";
 import TryOurProducts from "./try-our-products";
+import WhereToPurchase from "./where-to-purchase";
 
 import "./home.scss";
 
@@ -58,6 +59,7 @@ class Home extends Component {
         </div>
         <AboutSection />
         <TryOurProducts />
+        <WhereToPurchase />
       </>
     );
   }
