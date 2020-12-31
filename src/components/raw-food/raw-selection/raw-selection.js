@@ -4,6 +4,7 @@ import Article from "../../article";
 import pig from "../../assets/pig.png";
 import bull from "../../assets/bull.png";
 import chicken from "../../assets/chicken.png";
+import beet from "../../assets/beet.png";
 
 import "./raw-selection.scss";
 
@@ -16,11 +17,19 @@ const RawSelection = () => {
       <div className={cn(`${block}__article-container`, `${block}--show`)}>
         <Article
           image={bull}
-          title={"BEEFY BUDY"}
+          title={"BEEFY BUDDY"}
           content={
             "Beef Heart, Beef Liver, Beef, Carrot, Green Bean, Blueberry, Yogurt, Whole Egg, Flax, Seed, Sunflower Oil, Rosemary"
           }
           imageStyleName={`${block}__bull-image`}
+        />
+        <Article
+          image={beet}
+          title={"TURN UP THE BEET"}
+          content={
+            "Beets, Carrots, Apples, Celery, Yogurt, Whole Egg, Flax Seed, Sunflower Oil, Rosemary"
+          }
+          imageStyleName={`${block}__beet-image`}
         />
         <Article
           image={pig}
