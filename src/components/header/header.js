@@ -2,18 +2,19 @@ import React, { useState } from "react";
 import cn from "classnames";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBars,
-  faTimes,
-  faAddressCard,
-  faPaperPlane,
-  faSeedling,
-  faStoreAlt
-} from "@fortawesome/free-solid-svg-icons";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+//import dogBowl from "../assets/dog-bowl.png";
 import pawSvg from "../assets/paw-logo-yellow.png";
 import Drawer from "../drawer";
 
 import "./header.scss";
+
+/*
+faAddressCard,
+  faPaperPlane,
+  faSeedling,
+  faStoreAlt
+  */
 
 const Header = ({ showHeader }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,11 +38,15 @@ const Header = ({ showHeader }) => {
           </button>
         </div>
         <section className="links">
-          <Link className="links__item" to={"/"}>
-            <FontAwesomeIcon icon={faStoreAlt} />
-            <span className="links__text">Shop</span>
+          <Link className="links__item" to={"/raw-food"}>
+            {/* <img
+              src={dogBowl}
+              //className={`${block}__circle--yellow`}
+              alt="yellow circle"
+            /> */}
+            <span className="links__text">RAW FOOD</span>
           </Link>
-          <Link className="links__item" to={"/"}>
+          {/* <Link className="links__item" to={"/"}>
             <FontAwesomeIcon icon={faAddressCard} />
             <span className="links__text">About</span>
           </Link>
@@ -52,7 +57,7 @@ const Header = ({ showHeader }) => {
           <Link className="links__item" to={"/"}>
             <FontAwesomeIcon icon={faSeedling} />
             <span className="links__text">Farmers</span>
-          </Link>
+          </Link> */}
         </section>
       </Drawer>
       <div className="menu" onClick={onToggle}>
