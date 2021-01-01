@@ -3,8 +3,7 @@ import cn from "classnames";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-//import dogBowl from "../assets/dog-bowl.png";
-import pawSvg from "../assets/paw-logo-yellow.png";
+import pawSvg from "../assets/paw-logo-yellow-perfect.svg";
 import Drawer from "../drawer";
 
 import "./header.scss";

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import logoBase from "../assets/new-logo-no-paw.png";
-import pawSvg from "../assets/paw-logo-yellow.png";
+import pawSvg from "../assets/paw-logo-yellow-perfect.svg";
 import Header from "../header";
 import AboutSection from "./about-section";
 import TryOurProducts from "./try-our-products";

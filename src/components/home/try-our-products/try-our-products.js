@@ -1,9 +1,10 @@
 import React from "react";
 import cn from "classnames";
+import { Link } from "react-router-dom";
 import Article from "../../article";
-import bluePaw from "../../assets/paw-logo-blue.png";
-import beerBottle from "../../assets/beer-bottle.png";
-import dogBowl from "../../assets/dog-bowl.png";
+import bluePaw from "../../assets/paw-logo-blue-perfect.svg";
+import beerBottle from "../../assets/beer-bottle-perfect.svg";
+import dogBowl from "../../assets/dog-bowl-perfect.svg";
 
 import "./try-our-products.scss";
 
@@ -14,13 +15,15 @@ const TryOurProducts = () => {
     <div className={block}>
       <h2 className={`${block}__title`}>OUR PRODUCTS</h2>
       <div className={cn(`${block}__article-container`, `${block}--show`)}>
-        <Article
-          image={dogBowl}
-          title={"RAW FOOD"}
-          content={
-            "Support your pet's health by feeding them a healthy raw diet."
-          }
-        />
+        <Link className={`${block}__link`} to={"/raw-food"}>
+          <Article
+            image={dogBowl}
+            title={"RAW FOOD"}
+            content={
+              "Support your pet's health by feeding them a healthy raw diet."
+            }
+          />
+        </Link>
         <Article
           image={beerBottle}
           title={"DOG BREWS"}

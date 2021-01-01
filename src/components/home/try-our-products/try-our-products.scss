@@ -51,6 +51,15 @@
     color: $new-yellow-900;
   }
 
+  &__link {
+    text-decoration: none;
+    color: $blue-900;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &__article-container {
     margin: 0 auto;
     display: flex;

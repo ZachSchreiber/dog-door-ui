@@ -67,6 +67,7 @@
   }
 
   &__circle--white {
+    transform: rotate(90deg);
     position: absolute;
     width: 600px;
     top: -650px;

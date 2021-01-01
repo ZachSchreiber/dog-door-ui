@@ -2,10 +2,10 @@ import React from "react";
 import cn from "classnames";
 import useScroll from "../../../utils/use-scroll";
 import rawBowl from "../../assets/raw-bowl.png";
-import whispyCircle from "../../assets/whispy-circle-yellow.png";
-import whispyCircleWhite from "../../assets/whispy-circle-white.png";
-import swiggleBlue from "../../assets/swiggle-blue.png";
-import swiggleYellow from "../../assets/swiggle.png";
+import whispyCircle from "../../assets/whispy-circle-yellow-perfect.svg";
+import whispyCircleWhite from "../../assets/whispy-circle-white-perfect.svg";
+import swiggleBlue from "../../assets/swiggle-blue-perfect.svg";
+import swiggleYellow from "../../assets/swiggle-perfect.svg";
 
 import "./raw-overview.scss";
 

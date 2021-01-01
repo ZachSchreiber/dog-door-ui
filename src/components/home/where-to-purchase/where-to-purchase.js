@@ -2,9 +2,9 @@ import React from "react";
 import cn from "classnames";
 import useScroll from "../../../utils/use-scroll";
 import whereToPurchase from "../../assets/where-to-purchase.png";
-import whispyCircle from "../../assets/whispy-circle-yellow.png";
-import whispyCircleWhite from "../../assets/whispy-circle-white.png";
-import swiggleBlue from "../../assets/swiggle-blue.png";
+import whispyCircle from "../../assets/whispy-circle-yellow-perfect.svg";
+import whispyCircleWhite from "../../assets/whispy-circle-white-perfect.svg";
+import swiggleBlue from "../../assets/swiggle-blue-perfect.svg";
 
 import "./where-to-purchase.scss";
 

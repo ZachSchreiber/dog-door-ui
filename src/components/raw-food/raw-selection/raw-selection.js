@@ -1,10 +1,10 @@
 import React from "react";
 import cn from "classnames";
 import Article from "../../article";
-import pig from "../../assets/pig.png";
-import bull from "../../assets/bull.png";
-import chicken from "../../assets/chicken.png";
-import beet from "../../assets/beet.png";
+import pig from "../../assets/pig-perfect.svg";
+import bull from "../../assets/bull-perfect.svg";
+import chicken from "../../assets/chicken-perfect.svg";
+import beet from "../../assets/beet-perfect.svg";
 
 import "./raw-selection.scss";
 
