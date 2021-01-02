@@ -43,6 +43,9 @@ const Header = ({ showHeader }) => {
           <Link className="links__item" to={"/dog-brews"}>
             <span className="links__text">DOG BREWS</span>
           </Link>
+          <Link className="links__item" to={"/meet-the-pack"}>
+            <span className="links__text">MEET THE PACK</span>
+          </Link>
         </section>
       </Drawer>
       <div className="menu" onClick={onToggle}>
