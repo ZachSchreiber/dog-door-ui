@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import cn from "classnames";
 import useScroll from "../../../utils/use-scroll";
 import overviewImage from "../../assets/brews-overview.png";
@@ -13,6 +13,13 @@ const block = "brews-overview";
 
 const BrewsOverview = () => {
   const [bbox, ref] = useScroll();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0
+    });
+  }, []);
 
   return (
     <div ref={ref} className={block}>

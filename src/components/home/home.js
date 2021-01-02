@@ -37,6 +37,10 @@ class Home extends Component {
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
+    window.scrollTo({
+      top: 0,
+      left: 0
+    });
   }
 
   componentWillUnmount() {
