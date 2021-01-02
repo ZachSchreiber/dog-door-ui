@@ -24,13 +24,15 @@ const TryOurProducts = () => {
             }
           />
         </Link>
-        <Article
-          image={beerBottle}
-          title={"DOG BREWS"}
-          content={
-            "A refreshing and healthy treat made exclusively for your furry friend."
-          }
-        />
+        <Link className={`${block}__link`} to={"/dog-brews"}>
+          <Article
+            image={beerBottle}
+            title={"DOG BREWS"}
+            content={
+              "A refreshing and healthy treat made exclusively for your furry friend."
+            }
+          />
+        </Link>
         <Article
           image={bluePaw}
           title={"BEAUTIFUR"}

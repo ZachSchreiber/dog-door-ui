@@ -38,25 +38,11 @@ const Header = ({ showHeader }) => {
         </div>
         <section className="links">
           <Link className="links__item" to={"/raw-food"}>
-            {/* <img
-              src={dogBowl}
-              //className={`${block}__circle--yellow`}
-              alt="yellow circle"
-            /> */}
             <span className="links__text">RAW FOOD</span>
           </Link>
-          {/* <Link className="links__item" to={"/"}>
-            <FontAwesomeIcon icon={faAddressCard} />
-            <span className="links__text">About</span>
+          <Link className="links__item" to={"/dog-brews"}>
+            <span className="links__text">DOG BREWS</span>
           </Link>
-          <Link className="links__item" to={"/"}>
-            <FontAwesomeIcon icon={faPaperPlane} />
-            <span className="links__text">Contact</span>
-          </Link>
-          <Link className="links__item" to={"/"}>
-            <FontAwesomeIcon icon={faSeedling} />
-            <span className="links__text">Farmers</span>
-          </Link> */}
         </section>
       </Drawer>
       <div className="menu" onClick={onToggle}>
