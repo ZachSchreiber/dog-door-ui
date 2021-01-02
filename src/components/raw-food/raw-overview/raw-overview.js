@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import cn from "classnames";
-import useScroll from "../../../utils/use-scroll";
 import rawBowl from "../../assets/raw-bowl.png";
 import whispyCircle from "../../assets/whispy-circle-yellow-perfect.svg";
 import whispyCircleWhite from "../../assets/whispy-circle-white-perfect.svg";
@@ -12,8 +11,6 @@ import "./raw-overview.scss";
 const block = "raw-overview";
 
 const RawOverview = () => {
-  const [bbox, ref] = useScroll();
-
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -22,7 +19,7 @@ const RawOverview = () => {
   }, []);
 
   return (
-    <div ref={ref} className={block}>
+    <div className={block}>
       <img
         src={whispyCircle}
         className={`${block}__circle--yellow`}
@@ -34,12 +31,7 @@ const RawOverview = () => {
         className={`${block}__swiggle--yellow`}
         alt="swiggle"
       />
-      <div
-        className={cn(
-          `${block}__content-container`,
-          bbox.top < 500 ? `${block}--show` : `${block}--hide`
-        )}
-      >
+      <div className={cn(`${block}__content-container`)}>
         <img src={rawBowl} className={`${block}__image`} alt="bowl of food" />
         <div className={`${block}__text-container`}>
           <h2 className={`${block}__title`}>RAW FOOD</h2>

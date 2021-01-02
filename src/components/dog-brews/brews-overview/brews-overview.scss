@@ -10,42 +10,6 @@
   justify-content: center;
   background-color: $blue-900;
 
-  &--show {
-    animation: about-show-animation 0.5s;
-    opacity: 1;
-    transform: translateY(rem(0));
-  }
-
-  &--hide {
-    animation: about-hide-animation 0.5s;
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  @keyframes about-show-animation {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(rem(0));
-    }
-  }
-
-  @keyframes about-hide-animation {
-    from {
-      opacity: 1;
-      transform: translateY(rem(0));
-    }
-
-    to {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-  }
-
   &__swiggle {
     position: absolute;
     transform: rotate(190deg);

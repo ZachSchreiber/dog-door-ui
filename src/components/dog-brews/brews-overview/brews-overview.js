@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import cn from "classnames";
-import useScroll from "../../../utils/use-scroll";
 import overviewImage from "../../assets/brews-overview.png";
 import whispyCircle from "../../assets/whispy-circle-yellow-perfect.svg";
 import whispyCircleWhite from "../../assets/whispy-circle-white-perfect.svg";
@@ -12,8 +11,6 @@ import "./brews-overview.scss";
 const block = "brews-overview";
 
 const BrewsOverview = () => {
-  const [bbox, ref] = useScroll();
-
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -22,7 +19,7 @@ const BrewsOverview = () => {
   }, []);
 
   return (
-    <div ref={ref} className={block}>
+    <div className={block}>
       <img
         src={whispyCircle}
         className={`${block}__circle--yellow`}
@@ -34,12 +31,7 @@ const BrewsOverview = () => {
         className={`${block}__swiggle--yellow`}
         alt="swiggle"
       />
-      <div
-        className={cn(
-          `${block}__content-container`,
-          bbox.top < 500 ? `${block}--show` : `${block}--hide`
-        )}
-      >
+      <div className={cn(`${block}__content-container`)}>
         <img
           src={overviewImage}
           className={`${block}__image`}
