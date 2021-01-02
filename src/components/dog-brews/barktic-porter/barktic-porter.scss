@@ -149,6 +149,11 @@
       height: 300px;
     }
 
+    &__circle--yellow {
+      width: 200px;
+      left: -100px;
+    }
+
     &__circle--white {
       width: 200px;
     }
@@ -165,6 +170,12 @@
   @media only screen and (max-width: 400px) {
     &__image {
       height: 200px;
+    }
+
+    &__swiggle {
+      width: 200px;
+      top: 100px;
+      left: -60px;
     }
   }
 }
