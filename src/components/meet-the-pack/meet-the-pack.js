@@ -22,12 +22,12 @@ const MeetThePack = () => {
   return (
     <div className={block}>
       <Header showHeader={"show"} />
+      <img
+        src={swiggleYellow}
+        className={`${block}__swiggle--yellow`}
+        alt="swiggle"
+      />
       <div className={`${block}__container`}>
-        <img
-          src={swiggleYellow}
-          className={`${block}__swiggle--yellow`}
-          alt="swiggle"
-        />
         <h2 className={`${block}__title`}>MEET THE PACK</h2>
         <div className={cn(`${block}__main-article`)}>
           <div className={`${block}__main-article--image-container`}>

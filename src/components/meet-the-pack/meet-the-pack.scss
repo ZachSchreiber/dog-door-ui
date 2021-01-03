@@ -5,6 +5,8 @@
   background-color: $blue-900;
   margin-top: 90px;
   min-height: calc(100vh - 90px);
+  position: relative;
+  overflow-x: hidden;
 
   &__container {
     margin: 0 auto;
@@ -20,7 +22,7 @@
     position: absolute;
     transform: rotate(130deg);
     width: 800px;
-    top: -100px;
+    top: -160px;
     left: -150px;
   }
 
@@ -78,7 +80,7 @@
   }
 
   &__article {
-    width: 275px;
+    max-width: 275px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -123,6 +125,10 @@
       padding-top: 40px;
     }
 
+    &__swiggle--yellow {
+      width: 600px;
+    }
+
     &__article-container {
       flex-direction: column;
     }
@@ -132,7 +138,9 @@
     margin-top: 40px;
 
     &__swiggle--yellow {
-      width: 600px;
+      width: 500px;
+      top: -100px;
+      left: -100px;
     }
 
     &__article--image {
