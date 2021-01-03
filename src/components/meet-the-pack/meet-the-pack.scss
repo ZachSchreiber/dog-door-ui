@@ -16,12 +16,21 @@
     width: 80%;
   }
 
+  &__swiggle--yellow {
+    position: absolute;
+    transform: rotate(130deg);
+    width: 800px;
+    top: -100px;
+    left: -150px;
+  }
+
   &__title {
     @include h3-base-styles;
     margin: 0;
     color: $blue-900;
     background-color: $new-yellow-900;
     text-align: center;
+    z-index: 3;
   }
 
   &__main-article {
@@ -30,6 +39,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 40px;
+    z-index: 3;
 
     &--image-container {
       display: flex;
@@ -120,6 +130,10 @@
 
   @media only screen and (max-width: 600px) {
     margin-top: 40px;
+
+    &__swiggle--yellow {
+      width: 600px;
+    }
 
     &__article--image {
       width: 250px;

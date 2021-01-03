@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import cn from "classnames";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import pawSvg from "../assets/paw-logo-yellow-perfect.svg";
@@ -8,14 +8,8 @@ import Drawer from "../drawer";
 
 import "./header.scss";
 
-/*
-faAddressCard,
-  faPaperPlane,
-  faSeedling,
-  faStoreAlt
-  */
-
 const Header = ({ showHeader }) => {
+  const { pathname } = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const onToggle = () => setIsOpen(!isOpen);
   return (
@@ -37,13 +31,34 @@ const Header = ({ showHeader }) => {
           </button>
         </div>
         <section className="links">
-          <Link className="links__item" to={"/raw-food"}>
+          <Link
+            className={cn(`links__item${pathname === "/" ? "--active" : ""}`)}
+            to={"/"}
+          >
+            <span className="links__text">HOME</span>
+          </Link>
+          <Link
+            className={cn(
+              `links__item${pathname === "/raw-food" ? "--active" : ""}`
+            )}
+            to={"/raw-food"}
+          >
             <span className="links__text">RAW FOOD</span>
           </Link>
-          <Link className="links__item" to={"/dog-brews"}>
+          <Link
+            className={cn(
+              `links__item${pathname === "/dog-brews" ? "--active" : ""}`
+            )}
+            to={"/dog-brews"}
+          >
             <span className="links__text">DOG BREWS</span>
           </Link>
-          <Link className="links__item" to={"/meet-the-pack"}>
+          <Link
+            className={cn(
+              `links__item${pathname === "/meet-the-pack" ? "--active" : ""}`
+            )}
+            to={"/meet-the-pack"}
+          >
             <span className="links__text">MEET THE PACK</span>
           </Link>
         </section>

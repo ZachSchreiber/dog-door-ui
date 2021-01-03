@@ -42,9 +42,9 @@
   height: 100%;
   position: fixed;
   right: 0;
+  top: 0;
   z-index: 9004;
   inline-size: rem(300);
-  overflow: auto;
   background: #fff;
   visibility: hidden;
   transition: scale, fade;

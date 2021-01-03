@@ -5,6 +5,7 @@ import stacyImage from "../assets/Stacy.png";
 import zachImage from "../assets/zach.png";
 import lunaImage from "../assets/luna.png";
 import razzoImage from "../assets/razzo.png";
+import swiggleYellow from "../assets/swiggle-perfect.svg";
 
 import "./meet-the-pack.scss";
 
@@ -22,6 +23,11 @@ const MeetThePack = () => {
     <div className={block}>
       <Header showHeader={"show"} />
       <div className={`${block}__container`}>
+        <img
+          src={swiggleYellow}
+          className={`${block}__swiggle--yellow`}
+          alt="swiggle"
+        />
         <h2 className={`${block}__title`}>MEET THE PACK</h2>
         <div className={cn(`${block}__main-article`)}>
           <div className={`${block}__main-article--image-container`}>
