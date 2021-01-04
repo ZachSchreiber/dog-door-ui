@@ -93,7 +93,7 @@ const OrderOnline = () => {
                 type="submit"
                 disabled={false}
               >
-                Submit
+                Check Address
               </button>
             </form>
           );

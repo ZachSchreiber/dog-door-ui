@@ -29,7 +29,6 @@
   background: rgba($color: #000000, $alpha: 0.8);
   width: 0%;
   &--open {
-    animation: overlay-animation 0.2s;
     width: 100%;
   }
 

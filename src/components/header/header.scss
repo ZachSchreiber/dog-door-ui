@@ -86,7 +86,7 @@
   cursor: pointer;
 
   &:hover {
-    color: $blue-900;
+    color: lighten($blue-900, 6%);
   }
 
   &__text {
