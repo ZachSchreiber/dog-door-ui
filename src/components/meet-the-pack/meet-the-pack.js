@@ -3,8 +3,8 @@ import cn from "classnames";
 import Header from "../header";
 import stacyImage from "../assets/Stacy.png";
 import zachImage from "../assets/zach.png";
-import lunaImage from "../assets/luna.png";
-import razzoImage from "../assets/razzo.png";
+import lunaImage from "../assets/luna.svg";
+import razzoImage from "../assets/razzo.svg";
 import swiggleYellow from "../assets/swiggle-perfect.svg";
 
 import "./meet-the-pack.scss";
