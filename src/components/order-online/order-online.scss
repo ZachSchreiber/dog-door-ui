@@ -1,0 +1,93 @@
+@import "../../styles/variables.scss";
+@import "../../styles/h3-base-styles";
+
+.order-online {
+  margin-top: 90px;
+  min-height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    @include h3-base-styles;
+    color: $blue-900;
+    background-color: $new-yellow-900;
+    text-align: center;
+    z-index: 3;
+  }
+
+  &__service-details,
+  &__distance-info,
+  &__form {
+    width: 80%;
+    font-size: 1.5em;
+    color: $blue-900;
+  }
+
+  &__form {
+    input[type="text"] {
+      border-style: none;
+      border: 1px solid $blue-900;
+      border-radius: 5px;
+      background-color: #fff !important;
+      color: $blue-900 !important;
+      padding: 10px;
+
+      margin-bottom: 30px;
+      font: $font-main !important;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px white inset !important;
+      color: $blue-900;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 10px;
+    font-weight: 900;
+  }
+
+  &__input {
+    color: $blue-900;
+    padding: 10px;
+    font-size: 1.2em;
+    width: 600px;
+    margin-bottom: 30px;
+  }
+
+  &__button {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: $blue-900;
+    font-size: 1em;
+    border-style: none;
+    border-radius: 5px;
+  }
+
+  &__distance-info {
+    a {
+      color: $blue-900;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    margin-top: 60px;
+    &__service-details,
+    &__distance-info,
+    &__form {
+      width: 90%;
+    }
+
+    &__input {
+      width: 300px;
+      padding: 5px;
+      font-size: 1em;
+    }
+  }
+}

@@ -61,6 +61,14 @@ const Header = ({ showHeader }) => {
           >
             <span className="links__text">MEET THE PACK</span>
           </Link>
+          <Link
+            className={cn(
+              `links__item${pathname === "/order-online" ? "--active" : ""}`
+            )}
+            to={"/order-online"}
+          >
+            <span className="links__text">ORDER ONLINE</span>
+          </Link>
         </section>
       </Drawer>
       <div className="menu" onClick={onToggle}>
