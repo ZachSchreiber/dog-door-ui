@@ -18,7 +18,7 @@ const block = "order-online";
 const OrderOnline = () => {
   const [distanceMessage, setDistanceMessage] = useState("");
   const [distance, setDistance] = useState();
-  const [userAddress, setUserAddress] = useState(null);
+  //const [userAddress, setUserAddress] = useState(null);
 
   useEffect(() => {
     if (distance) {
@@ -38,7 +38,7 @@ const OrderOnline = () => {
       const { lat, lng } = await getLatAndLong(address);
       if (!lat || !lng) throw new Error();
       const deliveryDistance = getDistance(36.0681638, -78.924559, lat, lng);
-      setUserAddress(address);
+      // setUserAddress(address);
       setDistance(Math.ceil(deliveryDistance));
     } catch (error) {
       setDistanceMessage(distanceMessages.IS_ERROR);
