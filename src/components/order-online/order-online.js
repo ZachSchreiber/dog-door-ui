@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { Form, Field } from "react-final-form";
 import getLatAndLong from "../../utils/get-lat-and-long";
 import getDistance from "../../utils/get-distance";
@@ -56,6 +57,14 @@ const OrderOnline = () => {
 
   return (
     <div className={block}>
+      <Helmet>
+        <title>Order Online</title>
+        <meta
+          name="description"
+          content="We offer a delivery service to locations within 10 miles from our
+        headquaters in north Durham."
+        />
+      </Helmet>
       <Header showHeader={"show"} />
       <h2 className={`${block}__title`}>DELIVERY SERVICE</h2>
       <p className={`${block}__service-details`}>

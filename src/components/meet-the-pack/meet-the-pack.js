@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import cn from "classnames";
 import Header from "../header";
 import stacyImage from "../assets/Stacy.png";
@@ -21,6 +22,10 @@ const MeetThePack = () => {
 
   return (
     <div className={block}>
+      <Helmet>
+        <title>Meet The Pack</title>
+        <meta name="description" content="Meet the Dog Door team." />
+      </Helmet>
       <Header showHeader={"show"} />
       <img
         src={swiggleYellow}

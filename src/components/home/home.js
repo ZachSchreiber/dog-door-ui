@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import { Helmet } from "react-helmet";
 import logoBase from "../assets/new-logo-no-paw.png";
 import pawSvg from "../assets/paw-logo-yellow-perfect.svg";
 import Header from "../header";
@@ -50,6 +51,13 @@ class Home extends Component {
   render() {
     return (
       <>
+        <Helmet>
+          <title>Dog Door</title>
+          <meta
+            name="description"
+            content="Dog Door Pet Food is Durham's premier Farm-To-Fido pet food company. We offer raw food, dog brews, and other products made with simple, locally sourced ingredients."
+          />
+        </Helmet>
         <Header showHeader={this.state.showHeader} />
         <div className="main" ref={this.mainRef}>
           <div className="main__logo-container">
