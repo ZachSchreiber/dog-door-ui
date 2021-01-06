@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import cn from "classnames";
 import Header from "../header";
-import stacyImage from "../assets/Stacy.png";
+import stacyImage from "../assets/stacy.svg";
 import zachImage from "../assets/zach.png";
 import lunaImage from "../assets/luna.svg";
 import razzoImage from "../assets/razzo.svg";
