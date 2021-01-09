@@ -35,10 +35,8 @@ const TryOurProducts = () => {
         </Link>
         <Article
           image={bluePaw}
-          title={"BEAUTIFUR"}
-          content={
-            "Pamper your best friend with these organic pet care products."
-          }
+          title={"AND MORE..."}
+          content={"Treats, pet care products, toys, and more!"}
           isPaw={true}
         />
       </div>

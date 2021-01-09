@@ -43,8 +43,8 @@ const WhereToPurchase = () => {
         <dl className={`${block}__description`}>
           <dt>FARMERS MARKET</dt>
           <dd>TBD</dd>
-          <dt>BARNES SUPPLY CO</dt>
-          <dd>9th Street Durham, NC</dd>
+          {/* <dt>BARNES SUPPLY CO</dt>
+          <dd>9th Street Durham, NC</dd> */}
           <dt>ONLINE ORDERS</dt>
           <dd>
             Check out our online store for more information. We offer free
