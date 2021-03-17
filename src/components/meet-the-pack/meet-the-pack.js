@@ -93,7 +93,7 @@ const MeetThePack = () => {
               />
             </div>
             <h3 className={`${block}__article--title`}>
-              LUNA, HUMAN (& CANINE) <br /> RESOURSES DEPARTMENT
+              LUNA, HUMAN (& CANINE) <br /> RESOURCE DEPARTMENT
             </h3>
             <p className={`${block}__article--content`}>
               With her strong terrier drive, Luna vocally encourages the crew to
