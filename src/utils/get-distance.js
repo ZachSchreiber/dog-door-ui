@@ -27,7 +27,6 @@
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 const getDistance = (lat1, lon1, lat2, lon2, unit) => {
-  console.log(lat1, lon1, lat2, lon2);
   if (lat1 === lat2 && lon1 === lon2) {
     return true;
   } else {

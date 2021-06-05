@@ -147,7 +147,7 @@ const OrderOnline = () => {
             <span role="img" aria-label="sad face">
               &#128546;
             </span>
-            &nbsp; Sorry, we encuntered an error while looking up your address.
+            &nbsp; Sorry, we encountered an error while looking up your address.
             Please try again.
           </p>
         )}
