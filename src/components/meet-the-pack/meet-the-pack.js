@@ -84,7 +84,7 @@ const MeetThePack = () => {
               and supportive husband.
             </p>
           </div>
-          <div className={cn(`${block}__article`)}>
+          {/* <div className={cn(`${block}__article`)}>
             <div className={`${block}__article--image-container`}>
               <img
                 src={lunaImage}
@@ -100,7 +100,7 @@ const MeetThePack = () => {
               maintain productivity and keep scratching her back. She has been
               busy training the new QC Dept.
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -3,10 +3,7 @@ import cn from "classnames";
 import { INTERACTIONS_AFFORDANCE } from "./constants";
 import "./drawer.scss";
 
-enum POSITIONS {
-  start = "start",
-  end = "end"
-}
+
 
 const FOCUSABLE_ELEMENTS_SELECTORS = [
   "button",
@@ -22,7 +19,7 @@ export interface DrawerProps {
   className?: string;
   isOpen?: boolean;
   onClose(affordance: string | undefined): void;
-  position: keyof typeof POSITIONS;
+  position: "start" | "end";
   setFocusOnOpen?: boolean;
   setFocusOnClose?: boolean;
   titleElementId: string;
@@ -32,7 +29,6 @@ export interface DrawerProps {
 class Drawer extends React.Component<DrawerProps> {
   static drawerClassName = "drawer";
   static drawerOverlayClassName = "drawer-overlay";
-  static POSITIONS = POSITIONS;
   static defaultProps = {
     isOpen: false,
     setFocusOnOpen: true,
@@ -44,11 +40,12 @@ class Drawer extends React.Component<DrawerProps> {
 
   drawerRef: React.RefObject<HTMLDivElement>;
 
-  private initiallyFocusedElement?: Element | null;
+  initiallyFocusedElement: Element | null;
 
   constructor(props: DrawerProps) {
     super(props);
     this.drawerRef = React.createRef();
+    this.initiallyFocusedElement = null
   }
 
   componentDidUpdate(prevProps: DrawerProps) {
@@ -98,12 +95,13 @@ class Drawer extends React.Component<DrawerProps> {
     const { returnFocusSelector, setFocusOnClose, onClose } = this.props;
 
     if (setFocusOnClose) {
-      const elementToFocus = returnFocusSelector
+      const elementToFocus: any = returnFocusSelector
         ? document.querySelector(returnFocusSelector)
         : this.initiallyFocusedElement;
 
       if (elementToFocus) {
-        (elementToFocus as HTMLElement).focus();
+        // @ts-igonre
+        (elementToFocus).focus();
       }
     }
 
@@ -139,8 +137,8 @@ class Drawer extends React.Component<DrawerProps> {
     const className = cn(
       drawerClassName,
       isOpen && `${drawerClassName}--open`,
-      position === POSITIONS.start && `${drawerClassName}--start-positioned`,
-      position === POSITIONS.end && `${drawerClassName}--end-positioned`
+      position === "start" && `${drawerClassName}--start-positioned`,
+      position === "end" && `${drawerClassName}--end-positioned`
     );
 
     return (

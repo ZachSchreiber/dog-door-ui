@@ -19,7 +19,7 @@ const Header = ({ showHeader }) => {
         onClose={onToggle}
         titleElementId={"fun"}
         setFocusOnOpen={true}
-        position={Drawer.POSITIONS.end}
+        position="end"
       >
         <div className="close-drawer">
           <div className="close-drawer__title-container">

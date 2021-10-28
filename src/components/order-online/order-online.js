@@ -69,7 +69,7 @@ const OrderOnline = () => {
       <h2 className={`${block}__title`}>DELIVERY SERVICE</h2>
       <p className={`${block}__service-details`}>
         We offer a delivery service to locations within 10 miles from our
-        headquaters in north Durham. Orders must be a minimun of $50.
+        headquaters in north Durham. Orders must be a minimum of $50.
       </p>
       <p className={`${block}__service-details`}>
         Please enter your address below to check if you are within our delivery
@@ -115,7 +115,7 @@ const OrderOnline = () => {
               <span role="img" aria-label="smiley face">
                 &#128512;
               </span>
-              &nbsp; You're right around the corner from Dog Door headquaters!
+              &nbsp; You're right around the corner from Dog Door headquarters!
             </p>
             {renderDetails()}
           </>
@@ -126,7 +126,7 @@ const OrderOnline = () => {
               <span role="img" aria-label="smiley face">
                 &#128512;
               </span>
-              &nbsp; You're {distance} miles from Dog Door headquaters!
+              &nbsp; You're {distance} miles from Dog Door headquarters!
             </p>
             {renderDetails()}
           </>
@@ -137,7 +137,7 @@ const OrderOnline = () => {
               <span role="img" aria-label="sad face">
                 &#128546;
               </span>
-              &nbsp; Sorry, you're {distance} miles from Dog Door headquaters.
+              &nbsp; Sorry, you're {distance} miles from Dog Door headquarnpm auditters.
             </p>
             <p>You can still visit one of our retail locations.</p>
           </>
