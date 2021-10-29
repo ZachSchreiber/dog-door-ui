@@ -1,19 +1,19 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import Header from "../header";
-import RawOverview from "./raw-overview";
-import RawSelection from "./raw-selection";
+import RawOverview from "./food-overview";
+import RawSelection from "./food-selection";
 
-import "./raw-food.scss";
+import "./food.scss";
 
-const RawFood = () => {
+const Food = () => {
   return (
-    <div className="raw-food">
+    <div className="food">
       <Helmet>
-        <title>Raw Food</title>
+        <title>Pet Food</title>
         <meta
           name="description"
-          content="Dog Door Pet Food offers several raw food options for dogs. Meats
+          content="Dog Door Pet Food offers several pet food options for dogs. Meats
             and seasonal vegetables are sourced from local farms and businesses."
         />
       </Helmet>
@@ -24,4 +24,4 @@ const RawFood = () => {
   );
 };
 
-export default RawFood;
+export default Food;

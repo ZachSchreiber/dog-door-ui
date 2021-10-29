@@ -6,11 +6,11 @@ import whispyCircleWhite from "../../assets/whispy-circle-white-perfect.svg";
 import swiggleBlue from "../../assets/swiggle-blue-perfect.svg";
 import swiggleYellow from "../../assets/swiggle-perfect.svg";
 
-import "./raw-overview.scss";
+import "./food-overview.scss";
 
-const block = "raw-overview";
+const block = "food-overview";
 
-const RawOverview = () => {
+const FoodOverview = () => {
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -34,9 +34,9 @@ const RawOverview = () => {
       <div className={cn(`${block}__content-container`)}>
         <img src={rawBowl} className={`${block}__image`} alt="bowl of food" />
         <div className={`${block}__text-container`}>
-          <h2 className={`${block}__title`}>RAW FOOD</h2>
+          <h2 className={`${block}__title`}>PET FOOD</h2>
           <p className={`${block}__description`}>
-            Dog Door Pet Food offers several raw food options for dogs. Meats
+            Dog Door Pet Food offers several pet food options for dogs. Meats
             and seasonal vegetables are sourced from local farms and businesses.
             Using local ingredients decreases our environmental impact, supports
             our communities, and ensures each ingredient offers its optimal
@@ -60,4 +60,4 @@ const RawOverview = () => {
   );
 };
 
-export default RawOverview;
+export default FoodOverview;

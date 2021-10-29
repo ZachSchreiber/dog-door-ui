@@ -6,14 +6,14 @@ import bull from "../../assets/bull-perfect.svg";
 import chicken from "../../assets/chicken-perfect.svg";
 import beet from "../../assets/beet-perfect.svg";
 
-import "./raw-selection.scss";
+import "./food-selection.scss";
 
-const block = "raw-selection";
+const block = "food-selection";
 
-const RawSelection = () => {
+const FoodSelection = () => {
   return (
     <div className={block}>
-      <h2 className={`${block}__title`}>OUR RAW FOOD</h2>
+      <h2 className={`${block}__title`}>OUR PET FOOD</h2>
       <div className={cn(`${block}__article-container`, `${block}--show`)}>
         <Article
           image={bull}
@@ -52,4 +52,4 @@ const RawSelection = () => {
   );
 };
 
-export default RawSelection;
+export default FoodSelection;

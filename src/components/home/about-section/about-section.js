@@ -32,7 +32,7 @@ const About = () => {
           <h2 className={`${block}__title`}>Who We Are</h2>
           <p className={`${block}__description`}>
             Dog Door Pet Food is Durham's premier Farm-To-Fido pet food company.
-            We offer raw food, dog brews, and other products made with simple,
+            We offer pet food, dog brews, and other products made with simple,
             locally sourced ingredients.{" "}
           </p>
         </div>

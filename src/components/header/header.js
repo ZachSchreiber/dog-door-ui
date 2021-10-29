@@ -39,11 +39,11 @@ const Header = ({ showHeader }) => {
           </Link>
           <Link
             className={cn(
-              `links__item${pathname === "/raw-food" ? "--active" : ""}`
+              `links__item${pathname === "/pet-food" ? "--active" : ""}`
             )}
-            to={"/raw-food"}
+            to={"/pet-food"}
           >
-            <span className="links__text">RAW FOOD</span>
+            <span className="links__text">PET FOOD</span>
           </Link>
           <Link
             className={cn(

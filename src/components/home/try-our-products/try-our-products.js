@@ -15,12 +15,12 @@ const TryOurProducts = () => {
     <div className={block}>
       <h2 className={`${block}__title`}>OUR PRODUCTS</h2>
       <div className={cn(`${block}__article-container`, `${block}--show`)}>
-        <Link className={`${block}__link`} to={"/raw-food"}>
+        <Link className={`${block}__link`} to={"/pet-food"}>
           <Article
             image={dogBowl}
-            title={"RAW FOOD"}
+            title={"PET FOOD"}
             content={
-              "Support your pet's health by feeding them a healthy raw diet."
+              "Support your pet's health by feeding them a healthy diet."
             }
           />
         </Link>

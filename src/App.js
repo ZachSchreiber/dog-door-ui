@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import Home from "./components/home";
-import RawFood from "./components/raw-food";
+import Food from "./components/food";
 import DogBrews from "./components/dog-brews";
 import MeetThePack from "./components/meet-the-pack";
 import OrderOnline from "./components/order-online";
@@ -14,7 +14,7 @@ class App extends Component {
       <div className="app">
         <Switch>
           <Route exact={true} path="/" component={Home} />
-          <Route exact={true} path="/raw-food" component={RawFood} />
+          <Route exact={true} path="/pet-food" component={Food} />
           <Route exact={true} path="/dog-brews" component={DogBrews} />
           <Route exact={true} path="/meet-the-pack" component={MeetThePack} />
           <Route exact={true} path="/order-online" component={OrderOnline} />

@@ -55,7 +55,7 @@ class Home extends Component {
           <title>Dog Door</title>
           <meta
             name="description"
-            content="Dog Door Pet Food is Durham's premier Farm-To-Fido pet food company. We offer raw food, dog brews, and other products made with simple, locally sourced ingredients."
+            content="Dog Door Pet Food is Durham's premier Farm-To-Fido pet food company. We offer pet food, dog brews, and other products made with simple, locally sourced ingredients."
           />
         </Helmet>
         <Header showHeader={this.state.showHeader} />
