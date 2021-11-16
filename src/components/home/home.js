@@ -68,7 +68,6 @@ class Home extends Component {
             />
             <img src={pawSvg} className="main__paw slam" alt="dog door logo" />
           </div>
-          <h1 className="main__info">Coming soon!</h1>
         </div>
         <AboutSection />
         <TryOurProducts />
