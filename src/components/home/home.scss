@@ -6,6 +6,7 @@
   align-items: center;
   flex-direction: column;
   overflow: hidden;
+  height: 100vh;
 
   &__logo-container {
     display: flex;
@@ -15,6 +16,7 @@
     animation: rattle 0.2s;
     animation-delay: 1.5s;
     margin-top: 100px;
+    margin-bottom: 100px;
   }
 
   &__logo-base {
@@ -93,25 +95,6 @@
     }
   }
 
-  &__info {
-    font-size: 8em;
-    color: $blue-900;
-    margin-top: 50px;
-  }
-
-  @media only screen and (max-width: 900px) {
-    &__info {
-      margin-top: 40px;
-      font-size: 5em;
-    }
-  }
-
-  @media only screen and (max-width: 600px) {
-    &__info {
-      font-size: 4em;
-    }
-  }
-
   @media only screen and (max-width: 500px) {
     margin-top: 0;
     &__logo-base {
@@ -120,11 +103,6 @@
 
     &__paw {
       height: 70%;
-    }
-
-    &__info {
-      margin-top: 40px;
-      font-size: 3em;
     }
   }
 }
